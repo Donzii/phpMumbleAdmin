@@ -1,0 +1,13 @@
+skel.css is the web site skeleton.
+
+The colors themes are stored in css/themes/
+You can find a default CSS color theme called default.css ( :o )
+
+How to include a new CSS style ?
+
+1 - The file must have a .css extension.
+2 - The file must be in the /css/themes folder.
+
+If you respect this, you will be able to select your CSS file in the configuration page.
+
+Remember that's all parameters in the color theme file will override skel.css parameters.

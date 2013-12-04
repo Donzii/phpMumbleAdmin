@@ -1,0 +1,1254 @@
+
+ /*
+ *    phpMumbleAdmin (PMA), a php web administration tool for murmur ( mumble server daemon ).
+ *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ *
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**************
+ DEFAULTS
+**************/
+
+html,
+body,
+div,
+span,
+a,
+img,
+b,
+i,
+ul,
+li,
+form,
+fieldset,
+label,
+table,
+tr,
+th,
+td,
+h1,
+h2 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	vertical-align: baseline;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+}
+
+body {
+	min-width: 870px;
+	max-width: 1200px;
+	padding: 10px;
+	margin: auto;
+}
+
+h1 {
+	font-size: 12px;
+	text-align: left;
+}
+
+ul, li {
+	list-style: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: underline;
+	white-space: nowrap;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+table {
+	table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 2px;
+	text-indent: 0px;
+	width: 100%;
+	margin: auto;
+}
+
+table.action {
+	width: 600px;
+}
+
+tr {
+	/* default: perfect for <td><input></td> */
+	height: 26px;
+}
+
+tr.pad {
+	height: 5px !important;
+}
+
+tr.small {
+	height: 20px;
+}
+
+tr.invisible {
+	height: 0px;
+}
+
+tr.invisible th {
+	border: 0px;
+}
+
+th {
+	vertical-align: middle;
+	text-align: left;
+	border: 1px solid black;
+	padding: 0px 10px;
+}
+
+th.id {
+	width: 40px;
+	text-align: center;
+	padding: 0px;
+}
+
+th.icon {
+	width: 28px;
+	text-align: center;
+	padding: 0px;
+}
+
+th.small {
+	width: 80px;
+}
+
+th.large {
+	width: 140px;
+}
+
+th.vlarge {
+	width: 200px;
+}
+
+.config th {
+	text-align: right;
+}
+
+td {
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: middle;
+	border: 1px solid black;
+	padding: 0px 10px;
+}
+
+table.tdwrap td {
+	white-space: normal;
+}
+
+td.id {
+	font-weight: bold;
+	text-align: right;
+	padding: 0px;
+	padding-right: 5px;
+}
+
+td.icon {
+	text-align: center;
+	padding: 0px;
+}
+
+td.selection {
+	padding: 0px;
+}
+
+td.selection a {
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-decoration: none;
+	padding: 0px 10px;
+	min-height: 22px;
+}
+
+td.hide {
+	border: 0px;
+}
+
+input,
+select,
+textarea {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	vertical-align: middle;
+	/* inset black */
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+
+textarea {
+	resize: none;
+	width: 99.5%;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset] {
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+input[type=text],
+input[type=password],
+select {
+	padding-left: 5px;
+	width: 250px;
+}
+
+select {
+	width: 258px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus, select:focus  {
+	outline: 2px solid black;
+}
+
+/***************************
+ MISC CLASSES
+***************************/
+
+.fontsmall {
+	font-size: 10px;
+}
+
+.n {
+	font-weight: normal;
+}
+
+.help {
+	cursor: help;
+	font-style: italic;
+}
+
+.help:after {
+	content: ' *';
+}
+
+.txtL {
+	text-align: left !important;
+}
+
+.txtC {
+	text-align: center !important;
+}
+
+.txtR {
+	text-align: right !important;
+}
+
+.button {
+	text-decoration: none;
+	font-weight: bold;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.button:hover {
+	outline: 1px solid black;
+}
+
+.button:active {
+	/* inset black */
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+
+.caption {
+	padding: 5px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.caption .bubble img {
+	margin-left: 0px;
+	vertical-align: middle;
+}
+
+/* Color schema for safe / warn / unsafe */
+.unsafe {
+	font-weight: bold;
+}
+
+/* table_paging */
+.table_paging {
+	font-weight: bold;
+	margin: 5px 10px;
+}
+
+.table_paging a,
+.table_paging span {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	min-width: 20px;
+	height: 20px;
+	/* center text */
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.table_paging span {
+	cursor: default;
+}
+
+.table_paging img {
+	/* Feet to the span */
+	padding: 2px;
+}
+
+.table_paging span.selected {
+	padding: 2px;
+}
+
+/* Go */
+.table_paging form {
+	display: inline-block;
+	margin: 0px 10px;
+	padding: 2px;
+}
+
+.table_paging form span {
+	padding: 1px 0px;
+}
+
+.table_paging form input {
+	margin: 0px 5px;
+}
+
+/* DESCRIPTION DIV */
+.description {
+	padding: 5px;
+	text-align: left;
+	word-wrap: break-word;
+	white-space: normal;
+	cursor: default;
+	/* inset black */
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+
+.description img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* INFO BUBBLE */
+.bubble {
+	position: relative;
+	cursor: help;
+}
+
+.bubble img {
+	margin: 0px 5px;
+	vertical-align: bottom;
+}
+
+.bubble span.desc {
+	/* The bubble must be over misc elements */
+	z-index: 500;
+	display: none;
+	position: absolute;
+	padding: 10px;
+	bottom: 35px;
+	right: -250px;
+	width: 250px;
+	font-weight: bold;
+	text-align: left;
+	font-size: 12px;
+	word-wrap: break-word;
+	white-space: normal;
+	background-color: white;
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px #888888;
+	-moz-box-shadow: 2px 2px 2px #888888;
+	-webkit-box-shadow: 2px 2px 2px #888888;
+}
+
+.bubble:hover span.desc {
+	display: block;
+}
+
+.bubble.r span.desc {
+	left: -250px;
+}
+
+/* FILLS */
+.fill {
+	display: inline-block;
+	height: 16px;
+	vertical-align: middle;
+	margin: 0px 5px;
+	padding: 2px 10px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	box-shadow: 2px 2px 4px #888888;
+	-moz-box-shadow: 2px 2px 4px #888888;
+	-webkit-box-shadow: 2px 2px 4px #888888;
+}
+
+.fill img.button {
+	width: 14px !important;
+	height: 14px !important;
+	vertical-align: top;
+}
+
+.fill.occ {
+	font-weight: bold;
+}
+
+/* EXPAND */
+/* expand a <ul></ul> menu on a mouse hover */
+.expand {
+	float: left;
+	position: relative;
+	cursor: default;
+}
+
+.expand ul {
+	z-index: 500;
+	display: none;
+	position: absolute;
+	padding: 10px 0px;
+	background: white;
+	text-align: left;
+	line-height: 16px;
+	min-width: 200px;
+	box-shadow: 1px 1px 5px black;
+	-moz-box-shadow: 1px 1px 5px black;
+	-webkit-box-shadow: 1px 1px 5px black;
+}
+
+.expand:hover ul {
+	display: block;
+}
+
+.expand ul li {
+	padding: 5px 10px;
+}
+
+.expand ul li a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	/* remove ul li padding */
+	margin: -5px -10px;
+	padding: 5px 10px;
+}
+
+.expand ul li a img {
+	margin-right: 5px;
+}
+
+/* ACTIONBOX */
+#js_background {
+	position: absolute;
+	z-index: 99998;
+	background-image: url( '../images/pma/smokedBG.png' );
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+.actionBox {
+	margin: 40px auto;
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: center;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.actionBox.alert {
+	font-size: 13px;
+}
+
+/* Specific to JS actionBoxs */
+.actionBox.js {
+	position: fixed;
+	z-index: 99999;
+	top: 35%;
+	margin: auto;
+	width: 400px;
+	box-shadow: 10px 10px 20px black;
+	-moz-box-shadow: 10px 10px 20px black;
+	-webkit-box-shadow: 10px 10px 20px black;
+}
+
+.actionBox.small {
+	width: 400px;
+}
+
+.actionBox.medium {
+	width: 600px;
+}
+
+.actionBox h1 {
+	margin-top: -20px;
+	margin-left: -10px;
+	margin-right: 15px;
+	margin-bottom: 20px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.actionBox h1 label {
+	display: block;
+	line-height: 20px;
+}
+
+.actionBox .name {
+	font-style: italic;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.actionBox .pad {
+	margin: 10px auto;
+}
+
+.actionBox img.back {
+	float: right;
+	/* remove the padding of actionBox; */
+	margin-top: -7px;
+	margin-right: -15px;
+}
+
+.actionBox.js img.drag {
+	float: right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+
+.actionBox .scroll {
+	height: 200px;
+	overflow-y: scroll;
+}
+
+.actionBox.auth {
+	width: 500px;
+	margin: auto;
+	text-align: left;
+	margin-top: 60px;
+}
+
+.actionBox.auth h1 {
+	display: inline-block;
+}
+
+.actionBox.auth th {
+	width: 150px;
+}
+
+
+/* TOOLBAR */
+.toolbar {
+	margin: 10px 0px;
+	min-height: 24px;
+	padding: 3px 5px;
+	font-weight: bold;
+	/* vertical align */
+	line-height: 24px;
+}
+
+.toolbar.small {
+	min-height: 18px;
+	line-height: 18px;
+}
+
+.toolbar .button {
+	padding: 0px 5px;
+	margin: 0px 1px;
+}
+
+.toolbar div.info {
+	overflow: hidden;
+	margin: 0px 50px;
+	white-space: nowrap;
+}
+
+.toolbar .tab {
+	margin: 0px 10px;
+}
+
+.toolbar .tab.selected {
+	margin: 0px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+
+/* SEARCH */
+#search {
+	float: right;
+	margin-top: -5px;
+	padding: 5px 10px;
+	font-weight: bold;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#search input {
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+/* MESSAGES BOXS */
+.messageBox {
+	padding: 5px;
+	margin: 10px 0px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.messageBox .pad {
+	width: 550px;
+	margin: auto;
+}
+
+.messageBox img.button {
+	float: right;
+	margin-top: -3px;
+	margin-right: -7px;
+}
+
+.messageBox .title {
+	font-size: 16px;
+	padding: 0px 15px;
+}
+
+.messageBox .text {
+	padding: 10px 5%;
+}
+
+.messageBox .supw {
+	padding: 0px 10px;
+	font-size: 16px;
+}
+
+
+/* INFO PANEL */
+#info_panel {
+	min-height: 20px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+/*********
+ HEAD
+*********/
+
+#head {
+	height: 75px;
+	padding: 5px 10px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-right: 1px solid black;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	box-shadow: 2px 2px 2px #888888;
+	-moz-box-shadow: 2px 2px 2px #888888;
+	-webkit-box-shadow: 2px 2px 2px #888888;
+}
+
+#head .title {
+	height: 30px;
+	line-height: 30px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#head .comment {
+	height: 15px;
+	width: 50%;
+	margin-left: 20px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#head .languages {
+	float: right;
+	padding: 4px 5px;
+	margin-right: -10px;
+}
+
+#head .languages li {
+	display: inline;
+}
+
+#head .languages img {
+	margin: 0px 1px;
+	width: 16px;
+	height: 11px;
+	border: 1px solid black;
+}
+
+#head .languages img.selected {
+	outline: 1px solid black;
+}
+
+#head .bottom {
+	margin-top: 5px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#head .bottom .userclass {
+	font-style: italic;
+}
+
+#head .bottom .pages li {
+	display: inline;
+}
+
+#head .bottom .pages a {
+	margin: 0px 2px;
+	padding: 5px;
+}
+
+/***************
+ PROFILES
+***************/
+
+#profiles {
+	margin: 0px 10px;
+}
+
+#profiles li {
+	display: inline;
+}
+
+#profiles a {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 1px 10px;
+	box-shadow: 0px 2px 2px #888888;
+	-moz-box-shadow: 0px 2px 2px #888888;
+	-webkit-box-shadow: 0px 2px 2px #888888;
+}
+
+#profiles a.selected {
+	padding-bottom: 5px;
+}
+
+#profiles a img {
+	margin-top: 4px;
+	width: 8px;
+	height: 8px;
+}
+
+#profiles a img.pub {
+	margin-right: 5px;
+}
+
+/**************************
+ PAGES CONTAINER
+***************************/
+
+#page {
+	margin: 10px 0px;
+	padding: 10px;
+	border: 1px solid black;
+	border-bottom: 10px solid black;
+}
+
+#page .page_top {
+	height: 30px;
+	margin: -10px;
+	margin-bottom: 5px;
+}
+
+#page .page_top .vserver {
+	padding: 2px 10px;
+	height: 21px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#page .page_top .vserver img {
+	outline: 0px;
+}
+
+#page .page_top .vserver .sharp {
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+#page .page_top .dropdown_list {
+	float: right;
+	padding: 2px 10px;
+	height: 21px;
+}
+
+#page .page_top .dropdown_list select {
+	width: 300px;
+	margin-left: 5px;
+}
+
+/*********
+ TABS
+*********/
+
+#tabs {
+	text-align: left;
+	margin-left: 8%;
+	margin-bottom: 5px;
+	padding-top: 10px;
+}
+
+#tabs li {
+	display: inline;
+}
+
+#tabs a {
+	text-decoration: none;
+	padding: 10px;
+	padding-bottom: 5px;
+}
+
+#tabs a:hover {
+	padding: 9px;
+	padding-bottom: 5px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-right: 1px solid black;
+}
+
+#tabs li.selected a {
+	font-weight: bold;
+	padding: 10px;
+	padding-top: 12px;
+	padding-bottom: 5px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-right: 1px solid black;
+	border-bottom: 1px solid white;
+}
+
+/***************
+ CONTENTS
+***************/
+
+#contents {
+	min-height: 380px;
+	padding: 10px 2%;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#contents .box {
+	min-height: 350px;
+	padding: 5px 10px;
+	margin: 10px auto;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#contents .box.small {
+	width: 550px;
+}
+
+/****************
+ page: AUTH
+****************/
+
+/***********************
+ page: OVERVIEW
+***********************/
+
+/*****************************
+ page: CONFIGURATION
+*****************************/
+
+/*****************************
+ page: ADMINISTRATION
+*****************************/
+
+	/* tab: ADMINS */
+
+#edit_admin_access th {
+	vertical-align: top;
+	white-space: nowrap;
+	padding: 0px 3px;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+
+/********************
+ page: VSERVER
+*********************/
+
+	/* tab: CHANNELS */
+#viewerLeft {
+	float: left;
+	width: 350px;
+	min-height: 350px;
+}
+
+#viewerBox .tabmenu {
+	border-top: 10px solid black;
+	line-height: 20px;
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+#viewerBox .tabmenu a {
+	text-decoration: none;
+}
+
+#viewerBox .tabmenu .tab {
+	font-weight: bold;
+	padding: 3px 10px;
+}
+
+#viewerBox .tabmenu .tab.selected {
+	padding-bottom: 5px;
+}
+
+	/* Viewer */
+#viewer {
+	margin-left: 370px;
+	cursor: default;
+	line-height: 16px;
+}
+
+/**
+* MEMO : height: 16px;
+* Prevent to break lines with empty block.
+*/
+#viewer div {
+	height: 16px;
+	white-space: nowrap;
+}
+
+#viewer a {
+	height: 16px;
+	display: block;
+	text-decoration: none;
+}
+
+.board {
+	padding: 5px;
+	text-align: left;
+	margin: 10px 0px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.board img {
+	margin-right: 5px;
+	padding: 0px 5px;
+}
+
+.board li a {
+	display: block;
+	padding: 2px 5px;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.board .inherited {
+	font-style: italic;
+}
+
+	/* ACLs */
+#ACL {
+	padding: 10px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#ACL select {
+	margin-bottom: 5px;
+}
+
+#ACL table {
+	table-layout: auto;
+	margin: 10px auto;
+}
+
+#ACL tr {
+	height: 10px;
+}
+
+#ACL th {
+	text-align: right;
+}
+
+#ACL td {
+	text-align: center;
+	padding: 0px;
+}
+
+#ACL.disabled {
+	color: #666666;
+}
+
+	/* Groups */
+.empty {
+	font-weight: bold;
+	padding: 5px;
+}
+
+.groupMembers {
+	padding: 5px;
+	margin-bottom: 20px;
+	/* inset black */
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+
+.groupMembers img {
+	margin: 0px 5px;
+}
+
+.groupMembers li {
+	text-align: left;
+	height: 20px;
+}
+
+.groupMembers .name {
+	/* for too long name */
+	display: block;
+	margin-left: 10px;
+}
+
+.groupMembers li:hover {
+	cursor: default;
+}
+
+	/* tab: SETTINGS */
+#vserver_settings .key {
+	text-align: right;
+	padding: 0px;
+}
+
+#vserver_settings .key .bubble {
+	display: block;
+	padding: 4px 10px;
+}
+
+#vserver_settings .modified {
+	font-weight: bold;
+}
+
+	/* tab: REGISTRATIONS */
+#avatar {
+	width: 200px;
+	height: 200px;
+	/* vertical text align : center */
+	line-height: 200px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#avatar img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+
+#mumble_registration .center {
+	margin-left: 10px;
+	width: 50%;
+}
+
+#mumble_registration .center .login {
+	font-size :14px;
+	font-weight: bold;
+}
+
+#mumble_registration .center .login img {
+	margin-right: 10px;
+}
+
+#mumble_registration tr {
+	height: 22px;
+}
+
+#mumble_registration .menu {
+	margin-left: 10px;
+}
+
+#mumble_registration .menu li {
+	margin: 5px 0px;
+}
+
+	/* tab: BANS */
+#bans .user {
+	margin: 0px 10px;
+	font-weight: bold;
+}
+
+#ban_duration  {
+	font-weight: bold;
+	text-align: center;
+	/* remove margin of the actionBox */
+	margin: 0px -20px;
+}
+
+#ban_duration select {
+	width: 80px;
+}
+
+#ban_duration div {
+	margin: 10px 0px;
+}
+
+
+/***************
+ page: LOGS
+****************/
+
+#logs div {
+	white-space: pre-wrap;
+}
+
+#logs span {
+	padding: 0px 4px;
+}
+
+#logs .actionBox {
+	text-align: left;
+}
+
+#logs .Ldate {
+	margin: 10px 0px;
+	padding: 0px 25px;
+	font-weight: bold;
+}
+
+#logs .Ltime {
+	margin-right: 15px;
+	font-weight: bold;
+}
+
+/***********
+ FOOTER
+************/
+
+#whos_online {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+}
+
+#whos_online img {
+	margin-right: 20px;
+}
+
+#whos_online span {
+	display: inline-block;
+	margin: 2px;
+	padding: 2px 3px;
+	font-weight: bold;
+}
+
+#footer {
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: center;
+	/* outset black */
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	box-shadow: 2px 2px 2px #888888;
+	-moz-box-shadow: 2px 2px 2px #888888;
+	-webkit-box-shadow: 2px 2px 2px #888888;
+}

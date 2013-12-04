@@ -1,0 +1,9 @@
+If your time log is incorrect with PMA even if you have set the right time zone, it's come from a murmur bug.
+
+I've included a workaround but it's works only for linux as it's use the "date" system command.
+
+If you're using another OS like windows, BSD, Mac etc... I'm interrest to adapte this workaround to your system.
+Please contact me by email: PMA@ipnoz.net
+
+//////////////////////////////////////////////////////////////////////
+SAFE_MODE: ON  -> please see README.txt.

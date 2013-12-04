@@ -1,0 +1,291 @@
+
+0.4.3
+
+Hi folks, long time no see !
+
+This release is a hudge restructuration of the core project.
+Please report any bug:
+
+http://sourceforge.net/p/phpmumbleadmin/bugs/
+PMA@ipnoz.net
+
+
+File config/config.php
+   The variable "$config" has been renamed to "$array"
+   The key "mLogs_size" has been renamed to "vlogs_size"
+   The key "mLogs_adm_active" has been renamed to "vlogs_admins_active"
+   The key "mLogs_adm_highlights" has been renamed to "vlogs_admins_highlights"
+   The key "default_timeFormat" has been renamed to "default_time"
+
+File config/profiles.php
+   The file "config/iceProfiles.php" has been renamed to "config/profiles.php"
+   The variable "$iceProfilesArray" has been renamed to "$array"
+   The key "slice-profile" has been renamed to "slice_profile"
+   The key "slice-php" has been renamed to "slice_php"
+
+File config/admins.php
+   The variable "$pmaAdmins" has been renamed to "$array"
+
+Please update theses files if you want to reuse them with this version of PMA.
+
+Added an "external" channel viewer. See the README.txt for more informations.
+Added for registered users the channel tab.
+Added the possibility to display avatars only for SuperAdmins. See configuration->settings
+Added one more rule to become SuperUser_ru. See the README.txt.
+Added a new tab: configuration->debug
+Added a new page for SuperAdmins -> administration
+   ..."PMA logs" moved to administration page
+   ..."Admins" moved to administration page
+   ..."Who's online" moved to administration page
+   ..."Password pending request" moved to administration page
+Added Murmur 1.2.4 settings parameters:
+   ...opusThreshold ( Superadmins only )
+   ...channelNestingLimit ( Superadmins only )
+   ...suggestPositional
+   ...suggestPushToTalk
+Added more options to configure overview table parameters. See configuration->settings->tables
+Added the possibility to modify temporary the user session name with murmur 1.2.4 as it's permitted now. See Channels -> select user -> action tab.
+
+As an "invalid slice definitions file" is a pretty serious problem ( possibility to break the murmur configuration, PHP fatal error, and more... ),
+PMA will now disable the Ice profile when it find this error.
+The SuperAdmins will have to fix the problem and re-enable the profile.
+
+PMA admins administration has been reworked.
+
+Rewrited the who's online function to works with suhoshin session encrypt.
+
+Language variables has been reworked. Old files are obsolete ( sorry for that ^^ ).
+   ...2 new tools added in debug tab for language translation.
+
+You can choose to show or not vserver cache uptime. See configuration->settings.
+
+PMA will not show the slice profile field anymore if slice profiles are not enable ( in configuration->ICE tab ).
+PMA will now remember the last Ice public profile the user were if you have multiple Ice profiles.
+
+Bans table ( vservers ): PMA will not display single IP bitmask anymore.
+
+Renamed "locales" folder to "languages"
+Renamed "styles" folder to "css"
+
+Robot.txt - disabled by default robot indexation.
+
+Fixed a bug with ISS and virtuals servers logs.
+Fixed a bug with http server and non-standard port.
+Fixed lot of minors bugs.
+
+
+
+**********************************************************
+* Old changelogs
+**********************************************************
+
+0.4.2
+
+Fix a bug with php safe_mode and "No slice definition found" error.
+Fix a bug with php safe_mode and slices profiles detection.
+Fix few bugs for "Invalid submitted data" errors.
+
+0.4.1
+
+Added a fonction for update parameters of all virtual servers easily ( see the new setting icon in the server table, SuperAdmins and RootAdmins only ).
+Now PMA get the complet list of configured slice.profiles ( no need to add / delete them anymore, see configuration->ICE tab ).
+PMA do not use the php mail() function anymore. That permit to improve some functions:
+	...Catch smtp errors.
+	...Removed the check for a valid email as it can be an issue for intranet network with "funky" hostname.
+	...Possibility for all admins to change email of registered users with a certificate.
+Added the possibility to choose the smtp server hostname and port ( see configuration->settings ).
+Added certificate informations for connected users.
+Removed the check for a valid ip address for ICE profiles and the "host" parameter of virtual servers.
+	...It's now possible to set a hostname instead of ip address.
+Now admins can send messages to all virtual servers they have access in the overview page.
+
+LOCALES: $TEXT['msg']['iceError'] in messages.loc.php becomes $TEXT['msg_ice_error']
+LOCALES: $TEXT['msg']['iceHelp'] in messages.loc.php becomes $TEXT['msg_ice']
+
+Fix a bug where it's impossible to change auto-logout and check for update settings values.
+Workaround to fix an "InvalidSecretException" with murmur 1.2.3.
+Fix some bugs with a murmur 1.2.0 daemon.
+Fix minors bugs.
+Code rewriting / cleaning.
+
+0.4.0
+
+Japanese updated by arcenciel.
+Filters have been cleaned a bit, you will have to reset them probably.
+Locales informations options have been reworked.
+Disabled "who's online" for php installation with suhosin.session.encrypt = on.
+config/config.php file has been reworked.
+Superadmins can disable virtual server logs for admins and SuperUsers.
+Action and filters menus are now "clickable" if javascript is enable on the browser.
+Added drag & drop for javascript box.
+PMA now logs some admins actions.
+Murmur groups have been reworked. Now it's should work "as intended".
+localesConf['dir'] in locales/"language"/_LOCALE_CONFIG.php become localeConf
+Fix a bug with who's online and ice profile sorting.
+Fix a bug with add a murmur group.
+Fix a bug with channel order and channel position.
+Fix a bug with the login name on url connection.
+
+0.3.9
+
+This version have been heavily rewrote, I hope I broke anything.
+Do not hesitate to submit me any bug :) .
+
+English language updated by Jesepi.
+Admins have been reworked:
+Admin authentication become case insensitive. SuperAdmin auth still case sensitive.
+PMA check admins logins on admin creation and deny same name.
+For a better security, PMA now use the crypt( with Blowfish hash ) function instead of sha1() to store SuperAdmin and admins password.
+      ...Old password becomes obsolete and you will have to setup a new password for your admins.
+Now PMA ask for generate a random password for SuperUser on virtual server creation / reset.
+Now PMA erase correctly SuperUsers registration when we reset a virtual server.
+Added a new SuperUser class: SuperUser_ru. See README.txt.
+PMA now remove html tags when Admins and SuperUsers send a message on a vserver with allowHtml disabled.
+Added the possibility to move multiple users of a virtual server into a specific channel.
+      ...( See the "action" menu of a channel ).
+Now when you move all users of a channel, you have the possibility to select which users have to move.
+      ..."Move all users" become "Move users off the channel".
+Workaround for the phpICE >= 3.4 and channel order bug:
+      ...PMA now sort channels like the mumble client do ( you will probably not see any difference with phpICE 3.2 & 3.3 ).
+SuperAdmin and RootAdmins can see who are connected to the panel.
+Added a possibility for SuperAdmins to set default options value ( language, date, time etc... ).
+      ...See CONFIGURATION->OPTIONS->edit icon.
+Renamed language files: message.loc.php -> messages.loc.php, serversTable.loc.php -> overview.loc.php.
+      ...All $TEXT['servTable'] variables from "serversTable.loc.php / overview.loc.php" becomes $TEXT['overview'].
+Fix: PMA do not edit inherited groups anymore untill you are editing one.
+Fix a bug with ban user and the viewer.
+Fix a bug where an admin can't change his password.
+Fix: PMA do not update the "start time" value of a ban on ban edition. Now it's keep the original time as intended.
+Fix a bug with the virtual server certificate and "valid time" ( included with PMA 0.3.8 ).
+Lot of code cleaning, I hope I broke anything ^^ .
+Minors bugs fixed.
+Some designe improvement.
+
+0.3.8
+Japanese language updated by Arcenciel.
+Improvement of date format and localisation. Please see README.txt for more informations.
+Improvement of language selection. Flag selection for the auth page. Possibility to turn on the flag selection for the whole web site. ( look  for $pmaConf_show_selectLocales into config/config.php ).
+
+0.3.8-RC1
+Improvement of ICE profiles. If you want to use your old config/iceProfiles.php from PMA 0.3.6, it will be automaticly upgraded, and a backup file config/iceProfiles.php.BAK will be created.
+Added an automatic check-for-update function. PMA will now inform SuperAdmins for new release.
+Added multi-admins system to PMA. Please see README.txt for more informations.
+Added a function for reset completly the configuration of a virtual server with the idea of Olivier from http://www.mumblegratuit.eu ( free mumble servers service ).
+Added captions to slim tables and viewer.
+Added average udp and tcp ping for user session ( this ICE feature comes with murmur 1.2.4 ).
+Added user registration search
+Added an option to let you choose the login name to connect to a virtual server. See configuration -> options
+Added an option for activate explicit error messages for the password generation request system. This can give useful info for both good and bad users. Please see README.txt for more informations.
+Improvement of PMA logs. Old logs will not be highlighted like usual.
+Removed the ability to change server name in the channel property tab. You still can change it in the vserver settings tab.
+Removed the possibility to not cache the drop-down vserver list. Now it's always cached.
+Removed the possibility to not display the drop-down vserver list for the SuperAdmins as it's always cached.
+Design improvement.
+Code cleaning.
+Minors bugs fixed.
+
+0.3.7-2
+Fix a bug with the select language function.
+
+0.3.6
+
+Fix a vulnerability where SuperUser can start / stop his virtual server even if SuperAdmin don't autorize it.
+
+Added ICE profiles: you can now manage multiple murmur daemon with one PMA installation. Please see README.txt for more information.
+Added a clean function to PMA logs for remove too old logs. See configuration->settings tab
+Added an autoban system to PMA similar to the murmur autoban system. Please see README.txt for more information.
+Added slice-php file for Murmur 1.2.3.
+Table page setting have been separated into 3 parameters for differenciate virtual server, users and ban.
+Now PMA write to logs every password generation request.
+Now PMA automaticly refresh the cache of the drop-down server list when SA add / remove / toggle access to a virtual server.
+New locales / language system. Please read locales/HOWTO.txt for more information. Locales from old version are obsolete.
+Japanese language updated by Arcenciel.
+German language removed as it haven't been updated.
+Fix a rare bug with HTTPS web site and redirection.
+Minors bugs fixed.
+Code cleaning.
+
+0.3.5 - "Time is money"
+Added ICE 3.4 support. Please see the README.txt for more information.
+Added the possibility to cache the virtual server drop-down list for decrease web server access. Please see the README.txt for more information.
+Added a system of page to limit the number of line for server list table, registered user table and ban list table. See configration page.
+Added a 30min max life time for user session in parallel of PHP session
+Added "crypt-nonce resync" to logs filters
+Japanese translation updated ( arcenciel )
+Removed Polish translation as it haven't been updated for a long time, and I cannot email the autor of the translation.
+PMA now remove HTML tags when modifying channel description and user comments if the parameter "allowhtml" is set to disable/false.
+Removed many ICE call for decrease web server time access.
+ICE profile become Slice profile to avoid some mistake. Slice profile become Slice-php with ICE 3.4
+Separated the css file: css/skel.css for the skeleton of the web site and css/themes/default.css for the color schema. Try the empty one, it's fun :D .
+Fix a bug when loading an user registration with a murmur 1.2.3 server.
+Now ICE timeout will not be multiplied by 2 anymore
+Code cleaning.
+Replaced all "<?" tags to "<?php" to be compatible with "short_open_tag = Off" parameter.
+Minors bugs fixed, some other added ( not on purpose of course ;o ).
+
+I made lot of change in the code for this version, I hope I didn't break anything :o
+Do not hesitate to submit a bug report to this address :
+
+https://sourceforge.net/tracker/?group_id=296260&atid=1250477
+
+or email me :
+pma@ipnoz.net
+
+Happy christmas folks
+
+0.3.4-3
+Fix a bug when changing some value in manage tab ( introduced with PMA 0.3.4-2 ).
+
+0.3.4-2
+Fix a bug when setting the welcome text
+
+0.3.4
+Added logs to PMA ( connection only for the moment, more action will be logged in the futur ).
+Added "defaultchannel" setting in the manage tab.
+Added "rememberchannel" setting in the manage tab ( for murmur 1.2.3 and higher ).
+Added recording icon to the channel viewer.
+Added the possibility to disable SuperUser to start / stop his virtual server ( enable by default. See option -> users tab ).
+Added more choice to the time format in the options.
+Added the possibility to choose the uptime format ( 3 differentes choice ).
+Improvement of the log search.
+Removed the "include filters in the log search" check box as I estimated it's a bit useless. Now all research will include automaticly the filters untill you desactivate the rule in the menu.
+Generate password: PMA will not display anymore an error message on invalid user name to avoid abuse.
+Lot of php notice level warn fixed.
+Some minor bug fix.
+Fix a slash bug with some config value.
+Fix a bug where SA and SU can add an invalid registerName.
+Fix a little bug where SuperUser isn't redirect on ICE error.
+Design improvement.
+
+0.3.3
+Fix a bug when a registered user try to change his password or delete his account.
+
+0.3.2
+Fix an important bug where PMA doesn't let SuperAdmin login if it's encounter an ICE error ( PMA 0.3.0 and 0.3.1 are affected ).
+Fix two bug with add ban function.
+PMA will not display anymore userPerChannel option in the manage tab for a murmur 1.2.0 server.
+PMA ask for a user name when you add a new registered user.
+Added the possibility to enable/disable access of a virtual server for SuperUser and registered user in the overview page. By default, the access to a virtual server is disable.
+Added .php extension to locales files.
+Implementation of priority speaker to PMA ( included in murmur 1.2.3 ).
+Implementation of user last connection time to PMA ( included in murmur 1.2.3 ).
+Added "Changed speak-state" to logs filters.
+Added "Moved user" to logs filters. Changed the "Moved by user" filter to "Moved self". Now PMA try to differentiate if it's a self action, or done by an "admin" to a regular user.
+"Moved channel" will not be filtered anymore.
+Added a search function to the logs.
+Added the possibility to SA to send a message to all booted servers.
+
+0.3.1
+Fixed some bugs with the the password generation system.
+Some cosmetic change.
+Code cleaning.
+Added the possibility to give a name to the web site in place of "PHP MUMBLE ADMIN" title and a description. ( see options tab ).
+
+0.3.0
+Added 'New connection', 'authenticated' and 'Connection closed' to the logs filters.
+Added the possiblity to connect to a particular channel in the action menu of the channel panel.
+Added German translation.
+If the selected user in the viewer had a reconnection, PMA will try to find the new session ID.
+Changed a bit the locales variables.
+PMA will cached all users avatars in /avatars/ folder.
+Added a system to generate random password to registered users with email confirmation. For more details, take a look at the README.txt.

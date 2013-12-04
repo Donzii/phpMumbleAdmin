@@ -1,0 +1,684 @@
+
+ /*
+ *    phpMumbleAdmin (PMA), a php web administration tool for murmur ( mumble server daemon ).
+ *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ *
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**************
+ DEFAULTS
+**************/
+
+ html {
+	color: #5d0000;
+	background: #e7e7e7;
+}
+
+a {
+	color: #5d0000;
+}
+
+img.on {
+	background: #00ff00; /* Flashy green */
+}
+
+img.off {
+	background: #5d0000;
+}
+
+table {
+	background: white;
+}
+
+tr:hover td.id {
+	background: #dbdbdb;
+}
+
+th {
+	background: #dbdbdb;
+	border-color: #dbdbdb;
+}
+
+th.title {
+	background: #5d0000;
+	border-color: transparent;
+	color: #f6f6f6;
+}
+
+td {
+	border-color: #dbdbdb;
+	background: #f6f6f6;
+}
+
+td.hide {
+	background: none;
+}
+
+td .info {
+	color: gray;
+}
+
+td.selection:hover {
+	background: #dbdbdb;
+}
+
+#overview .selected {
+	color: #f6f6f6;
+	background: #5d0000;
+}
+
+.email a {
+	color: black;
+}
+
+/* Remove ? */
+input[type=text]:hover, input[type=password]:hover, textarea:hover {
+	outline-color: gray;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus  {
+	outline-color: #5d0000;
+	background: lightyellow;
+}
+
+/*****************************
+ COMMON TEXT COLORZ
+*****************************/
+.fushia {
+	color: #7F007F;
+}
+
+.maroon {
+	color: #5d0000;
+}
+
+/* Color schema for safe / warn / unsafe */
+.safe {
+	color: green;
+}
+
+.warn {
+	color: darkorange;
+}
+
+.unsafe {
+	color: red;
+}
+
+/***************************
+ COMMON CLASSES
+***************************/
+.button:hover {
+	outline-color: #FBB117;
+}
+
+.button {
+ color: black;
+}
+
+/* table_paging */
+.table_paging a, .table_paging span {
+	color: gray;
+	border-color: gray;
+	background: #dbdbdb;
+}
+
+.table_paging a:hover {
+	background: #f6f6f6;
+}
+
+.table_paging span.selected {
+	color: #f6f6f6;
+	background: #5d0000;
+	border-color: #f6f6f6;
+}
+
+.debug {
+	background: #ffe8ec; /* simily pink */
+}
+
+.black {
+	color: black;
+}
+
+.caption {
+	background: lightyellow;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+/* USERS CLASSES COLORS */
+.SuperAdmin {
+	color: yellow;
+	background: black;
+}
+
+.RootAdmin {
+	color: black;
+	background: red;
+}
+
+.Admin {
+	background: orange;
+}
+
+.SuperUser {
+	color: yellow;
+	background: blue;
+}
+
+.SuperUser_ru {
+	background: lightblue;
+}
+
+.User {
+	background: lightgreen;
+}
+
+.unauth {
+	background: #dbdbdb;
+}
+
+/* DESCRIPTION DIV */
+.description {
+	color: black;
+	background: white;
+}
+
+.description a {
+	color: blue;
+}
+
+/* INFO BUBBLE */
+.bubble span.desc {
+	color: black;
+	background: lightyellow;
+	border-color: gray;
+}
+
+/* FILLS */
+.fill {
+	background: #dbdbdb;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+.fill.occ {
+	color: #FBB117;
+	background: #5d0000;
+}
+
+.fill.occ a {
+	color: lightyellow;
+}
+
+.fill .nb {
+	color: lightyellow;
+}
+
+.oBox {
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+.bg1 {
+	background: #f6f6f6;
+}
+
+/* EXPAND */
+/* expand a <ul></ul> menu on a mouse hover */
+.expand ul {
+	color: gray;
+	background: #e7e7e7;
+}
+
+.expand ul li a:hover {
+	background: lightgray;
+}
+
+.expand li .count {
+	color: green;
+}
+
+/* ACTIONBOX */
+.actionBox {
+	background: #dbdbdb;
+}
+
+.actionBox.alert {
+	background: #ffe8ec;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+.actionBox h1 {
+	background: #5d0000;
+	color: #f6f6f6;
+}
+
+.actionBox img.back {
+	background: white;
+}
+
+.actionBox img.drag {
+	background: #5d0000;
+}
+
+/* TOOLBAR */
+.toolbar {
+	background: #dbdbdb;
+}
+
+.toolbar .button {
+	background: #f6f6f6;
+}
+
+.toolbar .tab.selected {
+	background: #f6f6f6;
+	border-color: #dbdbdb;
+}
+
+/* SEARCH */
+#search {
+	color: black;
+	background: #dbdbdb;
+}
+
+/* MESSAGES BOX */
+.messageBox {
+	color: black;
+	background-color: white;
+}
+
+.messageBox a {
+	color: blue;
+}
+
+.messageBox img.button {
+	background: white;
+}
+
+.messageBox .error {
+	background-color: #ffe8ec; /* Similly pink */
+}
+
+.messageBox .fatal {
+	background-color: red;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.messageBox .success {
+	background-color: #ccffcc;
+}
+
+.messageBox .title {
+	color: yellow;
+	background: #5d0000;
+}
+
+.messageBox .alt {
+	color: green;
+}
+
+.messageBox .supw {
+	color: green;
+}
+
+/*********
+ HEAD
+*********/
+
+#head {
+	background: #5d0000;
+	color: #FBB117;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+#head a {
+	color: lightyellow;
+}
+
+#head .comment {
+	color: lightyellow;
+}
+
+#head .languages img.selected {
+	outline-color: #FBB117;
+}
+
+#head .userclass {
+	color: lightyellow;
+}
+
+#head .bottom .pages .selected {
+	color: #5d0000;
+	background: lightyellow;
+}
+
+/***************
+ PROFILES
+***************/
+
+#profiles a {
+	background: lightyellow;
+	color: #5d0000;
+}
+
+#profiles a:hover {
+	background: #dbdbdb;
+}
+
+#profiles a.selected {
+	background: #5d0000;
+	color: lightyellow;
+}
+
+/**************************
+ PAGES CONTAINER
+***************************/
+
+#page {
+	background: white;
+	border-color: #5d0000;
+}
+
+#page .page_top {
+	color: lightyellow;
+}
+
+#page .page_top .vserver {
+	background: #5d0000;
+}
+
+#page .page_top .vserver .sharp {
+	color: #FBB117;
+}
+
+#page .page_top .dropdown_list {
+	background: #5d0000;
+}
+
+#page .page_top .dropdown_list select {
+	background: lightyellow;
+}
+
+#page .page_top .dropdown_list select .selected {
+	color: yellow;
+	background: #5d0000;
+}
+
+#page .page_top .dropdown_list select .selected.disabled {
+	color: gray;
+}
+
+/*********
+ TABS
+*********/
+
+#tabs a {
+	background: #dbdbdb;
+}
+
+#tabs li.selected a {
+	background: #f6f6f6;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #f6f6f6 #ceb2b2;
+}
+
+#tabs a:hover {
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+/***************
+ CONTENTS
+***************/
+
+#contents {
+	background: #f6f6f6;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+#contents .box {
+	background: white;
+}
+
+/****************
+ page: AUTH
+****************/
+
+/***********************
+ page: OVERVIEW
+***********************/
+
+/*****************************
+ page: CONFIGURATION
+*****************************/
+
+/********************
+ page: VSERVER
+*********************/
+
+	/* tab: CHANNELS */
+#viewerBox {
+	background: #f6f6f6;
+}
+
+#viewerBox .tabmenu.channel {
+	border-color: #5d0000;
+}
+
+#viewerBox .tabmenu.channel .tab {
+	background: #FBB117;
+	color: #5d0000;
+}
+
+#viewerBox .tabmenu.channel .tab:hover {
+	background: #dbdbdb;
+}
+
+#viewerBox .tabmenu.channel .tab.selected {
+	background: #5d0000;
+	color: white;
+}
+
+#viewerBox .tabmenu.user {
+	border-color: #FBB117;
+}
+
+#viewerBox .tabmenu.user .tab {
+	background: #dbdbdb;
+	color: #5d0000;
+}
+
+#viewerBox .tabmenu.user .tab:hover {
+	background: lightgray;
+}
+
+#viewerBox .tabmenu.user .tab.selected {
+	background: #FBB117;
+	color: #5d0000;
+	border-color: #ceb2b2;
+	border-top: 1px solid  #FBB117;
+}
+
+#viewerBox .tabmenu .expand.tab {
+	background: #dbdbdb;
+}
+
+	/* viewer */
+#viewer .selected {
+	background: #FBB117;
+	color: #5d0000;
+}
+
+#viewer.action {
+	background: #f6f6f6;
+	color: gray;
+}
+
+#viewer.disabled {
+	background: #f6f6f6;
+	color: gray;
+}
+
+#viewer.disabled .moveTo {
+	background: red;
+	color: black;
+}
+
+#viewer a:hover {
+	background: #dbdbdb;
+}
+
+#viewer.action a {
+	background: #ffe8ec; /* simily pink */
+}
+
+#viewer.action a:hover {
+	background: red;
+}
+
+.board a {
+	color: black
+}
+
+.board .inherited {
+	background: #dbdbdb;
+	color: gray;
+}
+
+.board .modified {
+	background: #FBB117;
+}
+
+.board .selected {
+	background: #a4b8d4 !important; /* blue pastel */
+	color: black;
+}
+
+.board a:hover {
+	background: gray;
+	color: white;
+}
+
+
+/* GROUP tab */
+.empty {
+	color: gray;
+	background: #dbdbdb;
+}
+
+.groupMembers {
+	background: white;
+}
+
+.groupMembers li img.button {
+	background: white;
+}
+
+.groupMembers li:hover {
+	background:#dbdbdb;
+}
+
+.groupMembers li.disabled {
+	background: #dbdbdb;
+	color: gray;
+}
+
+
+	/* tab: SETTINGS */
+#vserver_settings tr:hover .key {
+	background: #f6f6f6;
+}
+
+#vserver_settings .modified {
+	color: blue;
+}
+
+	/* tab: REGISTRATIONS */
+#avatar {
+	background: #dbdbdb;
+}
+
+	/* tab: BANS */
+#bans .user {
+	color: black;
+}
+
+/***************
+ page: LOGS
+****************/
+
+#logs {
+	background: #f6f6f6;
+	color: black;
+}
+
+#logs .Ldate {
+	background: #dbdbdb;
+}
+
+#logs .Ltime {
+	color: #5d0000;
+	background: #dbdbdb;
+}
+
+#logs .Lauth {
+	background: #a4b8d4; /* Blue pastel */
+}
+
+#logs .Lclosed_conn {
+	background: pink;
+}
+
+#logs .Linfo {
+	background: #acff00; /* Flashy green */
+}
+
+#logs .Lwarn {
+	background: #FBB117;
+}
+
+#logs .Lerror {
+	background: red;
+}
+
+#logs .Ladmin {
+	color: yellow;
+	background: black;
+}
+
+/***********
+ FOOTER
+************/
+
+#whos_online {
+	background: white;
+}
+
+#footer {
+	background: #5d0000;
+	color: #FBB117;
+	/* outset maroon */
+	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+
+#footer a {
+	color: lightyellow;
+}

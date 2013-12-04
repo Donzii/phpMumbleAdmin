@@ -1,0 +1,40 @@
+/**
+* If you have an "Invalid slice definition file" error with PhpMumbleAdmin:
+*
+* It's can be for 2 reasons:
+*/
+
+   * with php-ICE 3.2
+   ******************
+
+If you are using phpICE 3.2 with murmur 1.2.x, you need to follow theses instructions:
+
+Open the Murmur.ice file binding with murmurd
+
+Search for :
+	dictionary<UserInfo, string> UserInfoMap;
+
+replace with :
+	dictionary<byte, string> UserInfoMap;
+
+Restart your http daemon.
+
+
+   * All others reasons:
+   **********************
+
+As an "invalid slice definitions file" is a pretty serious problem
+( possibility to break the murmur configuration, PHP fatal error, and more... ),
+PMA disable the ICE profile when it find this error.
+The SuperAdmins have to fix the problem and re-enable the profile,
+by clicking the red button on configuration->ICE.
+
+php-ICE 3.2 / 3.3
+Verify that the Murmur.ice you have loaded ( check PHP options "ice.slice", and "ice.profiles" )
+is really the one you downoaded with the murmur daemon.
+Don't forget to reload your http server after that.
+
+php-ICE 3.4
+Load the php-slice file of your murmur daemon. If you are not using an official major stable version of murmur,
+you will have to create your own php-slice file.
+See the readme.txt for more information about that.

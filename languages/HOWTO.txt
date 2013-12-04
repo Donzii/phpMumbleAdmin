@@ -1,0 +1,19 @@
+
+* ADD A LANGUAGE:
+PMA parse all folders in locales/ , if it find a file named 'common.loc.php', it will include automaticly the language.
+PMA will name the language with the folder name.
+
+* EXAMPLE:
+Create a directory 'FOO' in locales/, then add a file 'locales/FOO/common.loc.php' .
+
+* LANGUAGE NAME:
+If you want to give a custom name to your language, please take a look to locales/en_EN/_LOCALE_CONFIG.php.
+
+* FLAG
+PMA display language selection for the auth page with flags.
+If you want add a flag, just copy a PNG file named flag.png ( case sensitive for linux system and similar ) into your folder.
+PMA will rezise the image to 16 x 11 pixels.
+PMA use country flags from http://www.famfamfam.com.
+
+It's possible to enable the flag selection permanently:
+see configuration page, debug tab.

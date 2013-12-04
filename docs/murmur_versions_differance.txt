@@ -1,0 +1,52 @@
+
+/**
+* This file report some usefull change during murmur developpement.
+* Default version is murmur 1.2.0.
+*
+* For more details, see:
+*
+* http://mumble.sourceforge.net/Murmur.ini
+*/
+
+ * Murmur 1.2.1
+New ini parameter : "usersPerChannel"
+New method for Murmur_Server : "getCertificateList()"
+Bug fix for setChannelState() and the Root channel
+
+ * Murmur 1.2.2
+New method for Murmur_Meta : "getUptime()"
+New method for Murmur_Server : "getUptime()"
+New ini parameter : "icesecret"
+
+ * Murmur 1.2.3
+New ini parameters : icesecretRead and icesecretWrite ( which are replacing "icesecret" )
+New ini parameter : "rememberChannel" ( not sur for the murmur version )
+New method for Murmur_Meta : "getSlice()"
+New method for Murmur_Meta : "getSliceChecksums()"
+New method for Murmur_Server : effectivePermissions()
+New method for Murmur_Server : "getLogLen()"
+New variable for user session object : "prioritySpeaker"
+New  key for user registration array : "userLastActive"
+Bug fix when unlink a channel with Ice
+
+
+ * Murmur 1.2.4
+New variable for user session object : "udpPing"
+New variable for user session object : "tcpPing"
+New ini parameter : "sendVersion"
+New ini parameter : "opusThreshold"
+New ini parameter : "channelNestingLimit"
+New ini parameter : "suggestPositional"
+New ini parameter : "suggestPushToTalk"
+getLogLen does not require icesecretwrite anymore
+setState() permit to modify the "name" variable to change user login during all his session.
+new class : Murmur_TextMessage
+
+/**
+***************************************************************
+* TODO
+***************************************************************
+*/
+
+1.2.2 ( not sur for the version and if it's works over Ice )
+New ini parameter : "imageMessageLength" ( Integer )
