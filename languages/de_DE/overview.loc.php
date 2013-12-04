@@ -18,22 +18,22 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['total_srv'] = 'Total of servers: %s'; // Total of virtuals servers
-$TEXT['total_users'] = 'Total of users: %s'; // Total of online users
-$TEXT['confirm_del_server'] = 'Delete the virtual server #%d with all it\'s data?'; // %d = server ID
-$TEXT['msg_all_srv'] = 'Message to all servers';
-$TEXT['add_srv'] = 'Add a virtual server';
-$TEXT['webaccess_on'] = 'Web based access for users of the virtual server is currently enabled... Click to disable. Remember to edit the PMA options also';
-$TEXT['webaccess_off'] = 'Web based access is currently disabled... Click to enable';
-$TEXT['srv_name'] = 'Server name';
-$TEXT['del_srv'] = 'Delete the virtual server';
-$TEXT['confirm_reset_srv'] = 'Reset completely the configuration of the virtual server #%d?'; // %d = server ID
-$TEXT['reset_srv_info'] = 'Completly resets the configuration of a virtual server: Removing all channels, registered users, bans, ACLs, groups, and change the SuperUser password';
-$TEXT['generate_su_pw'] = 'Generate a password for SuperUser ?';
-$TEXT['mass_settings'] = 'Modify a parameter for all servers';
-$TEXT['select_setting'] = 'Select a parameter';
-$TEXT['confirm_with_word'] = 'Please confirm by enter the word "%s"'; // %s = confirm word
-$TEXT['confirm_word'] = 'confirm'; // This is the confirm word for $TEXT['confirm_with_word'], case sensitive, 4 characters minimum required.
-$TEXT['default_settings'] = 'Default settings';
+$TEXT['total_srv'] = 'Anzahl der Server: %s'; // Total of virtuals servers
+$TEXT['total_users'] = 'Anzahl der Benutzer: %s'; // Total of online users
+$TEXT['confirm_del_server'] = 'Sie wollen wirklich den kompletten virtuelle Server #%d loeschen, incl. seiner Daten?'; // %d = server ID
+$TEXT['msg_all_srv'] = 'Nachricht an alle Server';
+$TEXT['add_srv'] = 'Virtuellen Server hinzufuegen';
+$TEXT['webaccess_on'] = 'Web-basierter Zugriff für die Benutzer des virtuellen Servers ist zurzeit aktiviert ... Klicken Sie dieses Symbol, um dies zu deaktivieren. Denken Sie daran, die PMA-Optionen ebenso zu bearbeiten';
+$TEXT['webaccess_off'] = 'Web-basierter Zugriff für die Benutzer des virtuellen Servers ist zurzeit deaktiviert... Klicken Sie dieses Symbol, um zu aktivieren';
+$TEXT['srv_name'] = 'Servername';
+$TEXT['del_srv'] = 'Virtuellen Server loeschen';
+$TEXT['confirm_reset_srv'] = 'Komplettes Zuruecksetzen des virtuellen Servers #%d?'; // %d = server ID
+$TEXT['reset_srv_info'] = 'Komplettes Ruecksetzen der Konfiguration des virtuellen Servers: Entfernt alle Kanäle, registrierte Benutzer, Bans, ACLs, Gruppen und änderte das Superuser-Passwort';
+$TEXT['generate_su_pw'] = 'Neues Passwort fuer den SuperUser generieren?';
+$TEXT['mass_settings'] = 'Bearbeitung eines Parameters fuer alle Server';
+$TEXT['select_setting'] = 'Waehlen Sie einen Parameter';
+$TEXT['confirm_with_word'] = 'Bitte bestätigen Sie das Wort "%s"'; // %s = confirm word
+$TEXT['confirm_word'] = 'bestaetigt!'; // This is the confirm word for $TEXT['confirm_with_word'], case sensitive, 4 characters minimum required.
+$TEXT['default_settings'] = 'Standard-Einstellungen';
 
 ?>

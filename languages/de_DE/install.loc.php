@@ -19,16 +19,16 @@
  */
 
 // Menu
-$TEXT['start'] = 'Welcome';
+$TEXT['start'] = 'Willkommen';
 $TEXT['upgrade'] = 'Upgrade';
-$TEXT['require'] = 'Requirement';
+$TEXT['require'] = 'Vorraussetzungen';
 $TEXT['setup_sa'] = 'Setup SuperAdmin';
 
-$TEXT['install_welcome_msg'] = 'Welcome to phpMumbleAdmin.<br><br>The installation require a SuperAdmin login and password.';
+$TEXT['install_welcome_msg'] = 'Willkommen zum phpMumbleAdmin.<br><br>Die Installation benötigt zwingend ein SuperAdmin Login und Passwort.';
 
-$TEXT['install_note'] = 'Note: if you encoutered an ICE error after the installation, just connect with SuperAdmin account to fix the problem ';
-$TEXT['sa_login'] = 'SuperAdmin login';
-$TEXT['install_success'] = 'The SuperAdmin account has been setup successfully';
-$TEXT['install_to_finish'] = 'To finish the installation, please rename or delete /install/ folder';
+$TEXT['install_note'] = 'Hinweis: Wenn einen ICE-Fehler nach der Installation aufgetritt, verbinden Sie sich mit dem Superadmin-Konto, um das Problem zu beheben ';
+$TEXT['sa_login'] = 'SuperAdmin Login';
+$TEXT['install_success'] = 'Der SuperAdmin Account wurde erfolgreich eingerichtet';
+$TEXT['install_to_finish'] = 'Um die Installation erfolgreich zu beenden, loeschen Sie den /install/ Ordner, oder benennen Sie ihn um.';
 
 ?>

@@ -96,7 +96,7 @@ $TEXT['december'] = 'Dezember';
 
 $TEXT['murmur_vers'] = 'Murmur #%s'; // %s = Murmur version
 
-$TEXT['logout'] = 'Ausloggen';
+$TEXT['logout'] = 'Abmelden';
 $TEXT['autologout_at'] = 'Auto-Logout at %s'; // %s = Logout time
 
 $TEXT['toggle_panel'] = 'Oeffne / schliessen das Panel';

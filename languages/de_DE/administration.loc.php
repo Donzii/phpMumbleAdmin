@@ -20,28 +20,28 @@
 
 $TEXT['tab_admins'] = 'Admins';
 $TEXT['tab_bans'] = 'Bans';
-$TEXT['tab_pw_requests'] = 'Requests';
-$TEXT['tab_whos_online'] = 'Activity';
+$TEXT['tab_pw_requests'] = 'Anfragen';
+$TEXT['tab_whos_online'] = 'Aktivitaet';
 $TEXT['tab_logs'] = 'Logs';
 
-$TEXT['pw_request_pending'] = 'Password requests pending';
-$TEXT['ice_profile'] = 'ICE profile';
+$TEXT['pw_request_pending'] = 'wartende Passwort-Anfragen';
+$TEXT['ice_profile'] = 'PHP-ICE Profil';
 $TEXT['sid'] = 'Server ID';
 $TEXT['uid'] = 'User ID';
-$TEXT['request_id'] = 'Request ID';
-$TEXT['sessions_infos'] = 'Sessions: %1$s - Authenticated: %2$s - Unauthenticated: %3$s';
-$TEXT['proxyed'] = 'This user is probably behind a proxy.';
-$TEXT['unauth'] = 'Unauthenticated';
+$TEXT['request_id'] = 'Anfragen ID';
+$TEXT['sessions_infos'] = 'Session: %1$s - Bekannt: %2$s - Unbekannt: %3$s';
+$TEXT['proxyed'] = 'Dieser User scheint einen Proxy zu nutzen.';
+$TEXT['unauth'] = 'Unbekannt';
 
 // Admins tab
-$TEXT['add_admin'] = 'Add an admin';
-$TEXT['del_admin'] = 'Delete admin';
-$TEXT['confirm_del_admin'] = 'Do you confirm to delete this admin ?';
-$TEXT['user_name'] = 'User name';
-$TEXT['registered_date'] = 'Date registered';
-$TEXT['last_conn'] = 'Last connection';
-$TEXT['full_access'] = '%s : Full access'; // %s : ice profile name
+$TEXT['add_admin'] = 'Admin hinzufuegen';
+$TEXT['del_admin'] = 'Admin loeschen';
+$TEXT['confirm_del_admin'] = 'Sicher, dass Sie den Admin loeschen wollen?';
+$TEXT['user_name'] = 'Benutzername';
+$TEXT['registered_date'] = 'Datum der Registrierung';
+$TEXT['last_conn'] = 'Letzter Connect';
+$TEXT['full_access'] = '%s : Voller Zugriff'; // %s : ice profile name
 $TEXT['srv_access'] = '%1$s : %2$d server(s)'; // %1$s : ice profile name %2$d = number of virtual server admin have access
-$TEXT['enable_full_access'] = 'Enable full access rights for this profile';
+$TEXT['enable_full_access'] = 'Aktiviere volle Rechte fuer dieses Profil';
 
 ?>

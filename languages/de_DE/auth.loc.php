@@ -18,24 +18,24 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['Authentication'] = 'Authentication';
-$TEXT['pw'] = 'Password';
+$TEXT['Authentication'] = 'Authentifikation';
+$TEXT['pw'] = 'Passwort';
 $TEXT['server'] = 'Server';
-$TEXT['select_server'] = 'Select your server';
+$TEXT['select_server'] = 'Server auswaehlen';
 $TEXT['enter'] = 'Enter';
-$TEXT['gen_pw'] = 'Generate a password';
-$TEXT['request_dont_exists'] = 'This request does not exist.';
-$TEXT['new_generated_pw'] = 'A new password have been generated for your account:';
-$TEXT['back_auth_page'] = 'Back to the authentication page';
+$TEXT['gen_pw'] = 'Passwort generieren';
+$TEXT['request_dont_exists'] = 'Diese Anfrage existiert nicht.';
+$TEXT['new_generated_pw'] = 'Ein neues Passwort wurde fuer Ihren Account generiert:';
+$TEXT['back_auth_page'] = 'Zurück zur Loginseite';
 
 // Generate password email
-$TEXT['ice_profile_name'] = 'Ice profile : %s'; // %s = profile name
-$TEXT['server_name'] = 'Mumble server : %s'; // %s = server id & name
+$TEXT['ice_profile_name'] = 'PHP-Ice Profil : %s'; // %s = profile name
+$TEXT['server_name'] = 'Mumble Server : %s'; // %s = server id & name
 
-$TEXT['pw_mail_title'] = 'Mumble password generation request ( %s )'; // %s = Site web address
-$TEXT['pw_mail_body_1'] = 'If you don\'t know what this means, or you didn\'t request a password generation for your mumble account, please just delete this email and nothing will be done.';
-$TEXT['pw_mail_body_2'] = 'Please confirm your password generation for your mumble account by following this link:';
-$TEXT['pw_mail_body_3'] = 'This link is valid for %d hours and will redirect you to your new password'; // %d = delay time
+$TEXT['pw_mail_title'] = 'Mumble Passwort Generierungs-Anfrage ( %s )'; // %s = Site web address
+$TEXT['pw_mail_body_1'] = 'Wenn Sie nicht wissen, warum Sie diese Email erhalten haben oder Sie haben kein neues Mumble-Passwort angefragt, ignorieren Sie diese Email einfach.';
+$TEXT['pw_mail_body_2'] = 'Bitte bestaetigen Sie Ihr neues Mumble-Passwort unter folgendem Link:';
+$TEXT['pw_mail_body_3'] = 'Dieser Link steht Ihnen %d Stunden zur Verfuegung und leitet Sie zu Ihrem neuen Passwort'; // %d = delay time
 
 
 

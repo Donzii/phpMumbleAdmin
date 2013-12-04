@@ -18,9 +18,9 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['filters'] = 'Log filter';
-$TEXT['log_filtered'] = 'Logs filtered';
-$TEXT['highlight_logs'] = 'Highlight logs';
+$TEXT['filters'] = 'Log Filter';
+$TEXT['log_filtered'] = 'Logs gefiltert';
+$TEXT['highlight_logs'] = 'Highlight Logs';
 
 
 ?>
