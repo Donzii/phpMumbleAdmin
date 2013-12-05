@@ -47,7 +47,7 @@ $TEXT['clean_search'] = 'Suche löschen';
 $TEXT['ip_addr'] = 'IP Addresse';
 $TEXT['email_addr'] = 'Email Addresse';
 
-$TEXT['new_pw'] = 'Neüs Passwort';
+$TEXT['new_pw'] = 'Neues Passwort';
 $TEXT['confirm_pw'] = 'Passwort bestätigen';
 
 $TEXT['select_server'] = 'Server auswählen';

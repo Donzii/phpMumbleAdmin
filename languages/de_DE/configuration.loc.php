@@ -83,7 +83,7 @@ $TEXT['show_avatar'] = 'Avatare nur für SuperAdmins anzeigen';
 
 $TEXT['activate_su_login'] = 'Erlaube Superuser den Zugang zum Panel';
 $TEXT['activate_su_modify_pw'] = 'Erlaubten Superuser dürfen Kennwörter von registrierte Benutzer ändern';
-$TEXT['activate_su_vserver_start'] = 'Erlaubte Superuser dürfen virtülle Server starten/stoppen';
+$TEXT['activate_su_vserver_start'] = 'Erlaubte Superuser dürfen virtuelle Server starten/stoppen';
 $TEXT['activate_su_ru'] = 'Aktiviere die SuperUser_ru Klasse';
 $TEXT['activate_su_ru_info'] = 'Geben Sie Superuser die Rechte für registrierte Benutzer unter Bedingungen (siehe readme.txt)';
 $TEXT['reg_users'] = 'Registrierte Benutzer';
@@ -91,7 +91,7 @@ $TEXT['activate_ru_login'] = 'Erlaube registrierten Benutzern den Zugang zum Pan
 $TEXT['activate_ru_del_account'] = 'Erlaube registrierten Benutzern, Ihren Account zu löschen';
 $TEXT['activate_ru_modify_login'] = 'Erlaube registrierten Benutzern, Ihre Zugangsdaten zu ändern';
 
-$TEXT['vservers_logs'] = 'Virtülle Server Logs';
+$TEXT['vservers_logs'] = 'Virtuelle Server Logs';
 $TEXT['srv_logs_amount'] = 'Anzahl der Logs, die das Panel vom Server anzeigen soll';
 $TEXT['activate_vservers_logs_for_adm'] = 'Aktiviere das Log-Tab für Admins und SuperUser';
 $TEXT['activate_adm_highlight_logs'] = 'Erlaube Admins und SuperUsers das Hightlighten der Logs';
@@ -116,7 +116,7 @@ $TEXT['sa_only'] = 'nur für SuperAdmins';
 $TEXT['srv_dropdown_list'] = 'Server DropDown Liste';
 $TEXT['activate_auth_dropdown'] = 'Aktiviere die DropDown-Liste der Server auf der Loginseite';
 $TEXT['activate_auth_dropdown_info'] = 'Dies bedeutet, dass alle erreichbaren Server-IDs in dem HTML-Qüllcode der Loginseite angezeigt werden!';
-$TEXT['refresh_ddl_cache'] = 'Automatische Erneürung der DropDown-Serverliste (Cache). Zeit in Stunden';
+$TEXT['refresh_ddl_cache'] = 'Automatische Erneuerung der DropDown-Serverliste (Cache). Zeit in Stunden';
 $TEXT['ddl_show_cache_uptime'] =  'Zeige Cache-Uptime';
 
 $TEXT['autoban'] = 'Autoban';

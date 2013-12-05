@@ -30,7 +30,7 @@ $TEXT['no_avatar'] = 'Kein Avatar';
 
 $TEXT['cert_email_info'] = 'Registrierung mit einem zertifikat.<br>Beachten Sie, dass, wenn das Zertifikat eine E-Mail-Adresse enthält, wird die Registrierung mit dem Zertifikat-Adresse aktualisiert, wenn der Benutzer mit dem Server sich verbinden.';
 
-$TEXT['add_acc'] = 'Neün Account anlegen';
+$TEXT['add_acc'] = 'Neuen Account anlegen';
 $TEXT['add_acc_redirect'] = 'Redirect zu einem neün Account';
 
 $TEXT['comment'] = 'Kommentar';
