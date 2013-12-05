@@ -18,25 +18,25 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['fill_uptime'] = 'Server uptime: %s'; // %s Virtual server uptime
-$TEXT['fill_users'] = 'Online users: %s'; // %s Total of online user
-$TEXT['fill_channels'] = 'Total of channels: %s'; // %s Total of channels
-$TEXT['fill_registrations'] = 'Total of registrations: %s'; // %s Total of registrations
-$TEXT['fill_bans'] = 'Total of bans: %s'; // %s Total of bans
-$TEXT['fill_logs'] = 'Total of logs: %s'; // %s Total of logs entries
+$TEXT['fill_uptime'] = 'Server Uptime: %s'; // %s Virtual server uptime
+$TEXT['fill_users'] = 'Benutzer Online: %s'; // %s Total of online user
+$TEXT['fill_channels'] = 'Anzahl der Channels: %s'; // %s Total of channels
+$TEXT['fill_registrations'] = 'Anzahl der Registrierungen: %s'; // %s Total of registrations
+$TEXT['fill_bans'] = 'Anzahl der Bans: %s'; // %s Total of bans
+$TEXT['fill_logs'] = 'Anzahl der Logs: %s'; // %s Total of logs entries
 
 $TEXT['tab_channels'] = 'Channels';
-$TEXT['tab_settings'] = 'Settings';
-$TEXT['tab_settings_more'] = 'More...';
-$TEXT['tab_registrations'] = 'Registrations';
+$TEXT['tab_settings'] = 'Einstellungen';
+$TEXT['tab_settings_more'] = 'Mehr...';
+$TEXT['tab_registrations'] = 'Registrierungen';
 $TEXT['tab_bans'] = 'Bans';
 $TEXT['tab_logs'] = 'Logs';
 
-$TEXT['vserver_online'] = 'The server is running.';
-$TEXT['vserver_offline'] = 'The server is offline.';
-$TEXT['vserver_offline_info'] = 'You can\'t manage channels, registrations or bans while the server is offline.';
+$TEXT['vserver_online'] = 'Der Server läuft.';
+$TEXT['vserver_offline'] = 'Der Server ist offline.';
+$TEXT['vserver_offline_info'] = 'Sie können keine Channels, Registrieungen oder Bans bearbeiten, wenn der Server offline ist.';
 
 $TEXT['permanent'] = 'Permanent';
-$TEXT['cert_hash'] = 'Certificate ( sha1 hash )';
+$TEXT['cert_hash'] = 'Zertifikat ( sha1 hash )';
 
 ?>

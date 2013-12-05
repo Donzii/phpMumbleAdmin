@@ -21,20 +21,20 @@
 $TEXT['yes'] = 'Ja';
 $TEXT['no'] = 'Nein';
 $TEXT['modify'] = 'Bearbeiten';
-$TEXT['back'] = 'Zurueck';
+$TEXT['back'] = 'Zurück';
 $TEXT['apply'] = 'Anwenden';
 $TEXT['submit'] = 'Senden';
 $TEXT['none'] = 'Leer';
 $TEXT['cancel'] = 'Abbrechen';
 $TEXT['close'] = 'Schliessen';
 $TEXT['all'] = 'Alles';
-$TEXT['add'] = 'Hinzufuegen';
+$TEXT['add'] = 'Hinzufügen';
 $TEXT['ok'] = 'OK';
 $TEXT['caption'] = 'Caption';
 $TEXT['default'] = 'Standard';
-$TEXT['reset'] = 'Zuruecksetzen';
+$TEXT['reset'] = 'Zurücksetzen';
 $TEXT['invert'] = 'Invert';
-$TEXT['delete'] = 'Loeschen';
+$TEXT['delete'] = 'Löschen';
 $TEXT['end'] = 'Ende';
 
 $TEXT['class'] = 'Class';
@@ -47,10 +47,10 @@ $TEXT['clean_search'] = 'Suche löschen';
 $TEXT['ip_addr'] = 'IP Addresse';
 $TEXT['email_addr'] = 'Email Addresse';
 
-$TEXT['new_pw'] = 'Neues Passwort';
-$TEXT['confirm_pw'] = 'Passwort bestaetigen';
+$TEXT['new_pw'] = 'Neüs Passwort';
+$TEXT['confirm_pw'] = 'Passwort bestätigen';
 
-$TEXT['select_server'] = 'Server auswaehlen';
+$TEXT['select_server'] = 'Server auswählen';
 
 $TEXT['refresh_srv_cache'] = 'Auffrischen des Caches der Serverliste';
 
@@ -79,11 +79,11 @@ $TEXT['go_next'] = 'Nächste Seite';
 $TEXT['go_last'] = 'Letzte Seite';
 $TEXT['total_pages'] = '%s Seiten'; // %s = total of pages
 
-$TEXT['pma_available'] = 'PMA %s ist verfuegbar'; // %s new PMA version
+$TEXT['pma_available'] = 'PMA %s ist verfügbar'; // %s new PMA version
 
 $TEXT['january'] = 'Januar';
 $TEXT['feburary'] = 'Februar';
-$TEXT['march'] = 'Maerz';
+$TEXT['march'] = 'März';
 $TEXT['april'] = 'April';
 $TEXT['may'] = 'Mai';
 $TEXT['june'] = 'Juni';
@@ -99,7 +99,7 @@ $TEXT['murmur_vers'] = 'Murmur #%s'; // %s = Murmur version
 $TEXT['logout'] = 'Abmelden';
 $TEXT['autologout_at'] = 'Auto-Logout at %s'; // %s = Logout time
 
-$TEXT['toggle_panel'] = 'Oeffne / schliessen das Panel';
+$TEXT['toggle_panel'] = 'Öffne / schliessen das Panel';
 
 $TEXT['whos_online'] = 'Wer ist online ?';
 $TEXT['total_unauth'] = 'Unbekannt: %d';  // %d total of unauthenticated users
@@ -110,13 +110,13 @@ $TEXT['page_overview'] = 'Server Tabelle';
 $TEXT['page_vserver'] = 'Server';
 $TEXT['page_account'] = 'Account';
 
-$TEXT['last_activity'] = 'Letzte Aktivitaet';
+$TEXT['last_activity'] = 'Letzte Aktivität';
 
-$TEXT['invalid_IP_address'] = 'ungueltige IP Addresse ( ipv4 - ipv6 )';
-$TEXT['invalid_port'] = 'ungueltiger Port ( 0 - 65535 )';
+$TEXT['invalid_IP_address'] = 'ungültige IP Addresse ( ipv4 - ipv6 )';
+$TEXT['invalid_port'] = 'ungültiger Port ( 0 - 65535 )';
 $TEXT['invalid_numerical'] = 'Numerische Eingabe erforderlich ( %s )'; // %s = parameter + numeric range
 
-$TEXT['password_check_failed'] = 'Die Passwortueberprüfung schlug fehl. Bitte nochmals versuchen.';
+$TEXT['password_check_failed'] = 'Die Passwortüberprüfung schlug fehl. Bitte nochmals versuchen.';
 
 $TEXT['sort_by'] = 'Sortieren';
 

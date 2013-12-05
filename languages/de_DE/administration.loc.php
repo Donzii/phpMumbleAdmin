@@ -21,7 +21,7 @@
 $TEXT['tab_admins'] = 'Admins';
 $TEXT['tab_bans'] = 'Bans';
 $TEXT['tab_pw_requests'] = 'Anfragen';
-$TEXT['tab_whos_online'] = 'Aktivitaet';
+$TEXT['tab_whos_online'] = 'Aktivität';
 $TEXT['tab_logs'] = 'Logs';
 
 $TEXT['pw_request_pending'] = 'wartende Passwort-Anfragen';
@@ -30,18 +30,18 @@ $TEXT['sid'] = 'Server ID';
 $TEXT['uid'] = 'User ID';
 $TEXT['request_id'] = 'Anfragen ID';
 $TEXT['sessions_infos'] = 'Session: %1$s - Bekannt: %2$s - Unbekannt: %3$s';
-$TEXT['proxyed'] = 'Dieser User scheint einen Proxy zu nutzen.';
+$TEXT['proxyed'] = 'Dieser Benutzer scheint einen Proxy zu nutzen.';
 $TEXT['unauth'] = 'Unbekannt';
 
 // Admins tab
-$TEXT['add_admin'] = 'Admin hinzufuegen';
-$TEXT['del_admin'] = 'Admin loeschen';
-$TEXT['confirm_del_admin'] = 'Sicher, dass Sie den Admin loeschen wollen?';
+$TEXT['add_admin'] = 'Admin hinzufügen';
+$TEXT['del_admin'] = 'Admin löschen';
+$TEXT['confirm_del_admin'] = 'Sicher, dass Sie den Admin löschen wollen?';
 $TEXT['user_name'] = 'Benutzername';
 $TEXT['registered_date'] = 'Datum der Registrierung';
 $TEXT['last_conn'] = 'Letzter Connect';
 $TEXT['full_access'] = '%s : Voller Zugriff'; // %s : ice profile name
-$TEXT['srv_access'] = '%1$s : %2$d server(s)'; // %1$s : ice profile name %2$d = number of virtual server admin have access
-$TEXT['enable_full_access'] = 'Aktiviere volle Rechte fuer dieses Profil';
+$TEXT['srv_access'] = '%1$s : %2$d Server'; // %1$s : ice profile name %2$d = number of virtual server admin have access
+$TEXT['enable_full_access'] = 'Aktiviere volle Rechte für dieses Profil';
 
 ?>

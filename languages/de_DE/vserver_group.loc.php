@@ -18,22 +18,22 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['add_group'] = 'Add new group';
-$TEXT['no_group'] = 'No group';
-$TEXT['inherited_members'] = 'inherited members';
-$TEXT['del_group'] = 'Delete the group';
-$TEXT['inherit_parent_group'] = 'Inherit group members from parent';
-$TEXT['inheritable_sub'] = 'Make group inheritable to sub-channels';
-$TEXT['add_user_to_group'] = 'Add an user to the group';
-$TEXT['no_member'] = 'No member';
-$TEXT['members'] = 'Members';
-$TEXT['exclude_inherited'] = 'Exclude inherited member from the group';
-$TEXT['remove_member'] = 'Remove member from the group';
-$TEXT['excluded_members'] = 'Excluded inherited members';
-$TEXT['remove_excluded'] = 'Remove user from excluded members';
-$TEXT['no_excluded'] = 'No excluded member';
-$TEXT['inherited_group'] = 'inherited group';
-$TEXT['reset_inherited_group'] = 'Reset the inherited group';
+$TEXT['add_group'] = 'Gruppe hinzufügen';
+$TEXT['no_group'] = 'Keine Gruppe';
+$TEXT['inherited_members'] = 'geerbten Mitglieder';
+$TEXT['del_group'] = 'Gruppe löschen';
+$TEXT['inherit_parent_group'] = 'geerbte Gruppenmitglieder';
+$TEXT['inheritable_sub'] = 'Gruppe erbbar für den Sub-Channel';
+$TEXT['add_user_to_group'] = 'Benutzer zur Gruppe hinzufügen';
+$TEXT['no_member'] = 'Keine Mitglieder';
+$TEXT['members'] = 'Mitglieder';
+$TEXT['exclude_inherited'] = 'Ausschließen geerbt Mitglied aus der Gruppe';
+$TEXT['remove_member'] = 'Mitglied aus der Gruppe löschen';
+$TEXT['excluded_members'] = 'Ausschließen geerbt Mitglied';
+$TEXT['remove_excluded'] = 'Entferne Benutzer der ausgeschlossen Mitglieder';
+$TEXT['no_excluded'] = 'Kein Mitglied ausgeschlossen';
+$TEXT['inherited_group'] = 'geerbt Gruppe';
+$TEXT['reset_inherited_group'] = 'Reset der geerbten Gruppe';
 
 
 

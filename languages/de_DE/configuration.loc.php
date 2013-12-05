@@ -24,15 +24,15 @@ $TEXT['tab_settings'] = 'Einstellungen';
 $TEXT['tab_debug'] = 'Debug';
 
 // Tab options
-$TEXT['select_lang'] = 'Sprache auswaehlen';
-$TEXT['select_style'] = 'Style auswaehlen';
-$TEXT['select_time'] = 'Lokale Zeit auswaehlen';
+$TEXT['select_lang'] = 'Sprache auswählen';
+$TEXT['select_style'] = 'Style auswählen';
+$TEXT['select_time'] = 'Lokale Zeit auswählen';
 $TEXT['time_format'] = 'Zeitformat';
 $TEXT['date_format'] = 'Datumsformat';
-$TEXT['select_locales_profile'] = 'Lokales Profil auswaehlen';
+$TEXT['select_locales_profile'] = 'Lokales Profil auswählen';
 $TEXT['uptime_format'] = 'Uptime Format';
 $TEXT['conn_login'] = 'Connect Login';
-$TEXT['conn_login_info'] = 'Mit diese Option können Sie den Login-Namen, den Sie mit Servern verbinden, auswaehlen';
+$TEXT['conn_login_info'] = 'Mit diese Option können Sie den Login-Namen, den Sie mit Servern verbinden, auswählen';
 
 $TEXT['default_options'] = 'Standard Optionen';
 $TEXT['default_lang'] = 'Standard Sprache';
@@ -41,11 +41,11 @@ $TEXT['default_time'] = 'Standard Zeitzone';
 $TEXT['default_time_format'] = 'Standard Zeitformat';
 $TEXT['default_date_format'] = 'Stadard Datumsformat';
 $TEXT['default_locales'] = 'Standard lokale Informationen';
-$TEXT['add_locales_profile'] = 'Hinzufuegen eines lokalen Informationsprofils';
-$TEXT['del_locales_profile'] = 'Loeschen eines lokalen Informationsprofils';
+$TEXT['add_locales_profile'] = 'Hinzufügen eines lokalen Informationsprofils';
+$TEXT['del_locales_profile'] = 'Löschen eines lokalen Informationsprofils';
 
 $TEXT['sa_login'] = 'SuperAdmin Login';
-$TEXT['change_your_pw'] = 'Passwortaenderung';
+$TEXT['change_your_pw'] = 'Passwortänderung';
 $TEXT['enter_your_pw'] = 'Bitte geben Sie Ihr Passwort ein';
 
 // Tab ICE
@@ -57,12 +57,12 @@ $TEXT['ICE_secret'] = 'ICE Passwort';
 $TEXT['slice_profile'] = 'Slice Profil';
 $TEXT['slice_php_file'] = 'Slice php Datei';
 $TEXT['conn_url'] = 'Connection URL';
-$TEXT['conn_url_info'] = 'PMA erlauben, auf einen virtuellen Server mit der IP in Parameter "host" zu verbinden. Dieser Parameter erlaubt es, mit einem Hostnamen oder einer IP überschreiben.';
+$TEXT['conn_url_info'] = 'PMA erlauben, auf einen virtüllen Server mit der IP in Parameter "host" zu verbinden. Dieser Parameter erlaubt es, mit einem Hostnamen oder einer IP überschreiben.';
 $TEXT['public_profile'] = 'Oeffentliches Profil';
 $TEXT['default_ICE_profile'] = 'Standard ICE-Profil';
-$TEXT['add_ICE_profile'] = 'ICE-Profil hinzufuegen';
-$TEXT['del_profile'] = 'Loeschen eines Profils';
-$TEXT['confirm_del_ICE_profile'] = 'Sie sind sicher, dass Sie dieses ICE-Profil loeschen moechten?';
+$TEXT['add_ICE_profile'] = 'ICE-Profil hinzufügen';
+$TEXT['del_profile'] = 'Löschen eines Profils';
+$TEXT['confirm_del_ICE_profile'] = 'Sie sind sicher, dass Sie dieses ICE-Profil löschen möchten?';
 $TEXT['enable_profile'] = 'Hier Klicken, um das Profil zu aktivieren';
 
 // Tab settings
@@ -76,30 +76,30 @@ $TEXT['autologout'] = 'Auto-Logout nach x Minuten ( 5 - 30 )';
 $TEXT['autocheck_update'] = 'Automatischer Update-Check';
 $TEXT['autocheck_update_info'] = 'in Tagen: 0 - 31<br>0 deaktiviert diese Funktion';
 $TEXT['check_update'] = 'Nach einem Update suchen';
-$TEXT['inc_murmur_vers'] = 'Hinzufuegen der Mumbleversion in die Connection-URL';
+$TEXT['inc_murmur_vers'] = 'Hinzufügen der Mumbleversion in die Connection-URL';
 $TEXT['inc_murmur_vers_info'] = 'Ein alter Mumble-Client kann dann nicht auf den Server über die URL joinen';
 
-$TEXT['show_avatar'] = 'Avatare nur fuer SuperAdmins anzeigen';
+$TEXT['show_avatar'] = 'Avatare nur für SuperAdmins anzeigen';
 
 $TEXT['activate_su_login'] = 'Erlaube Superuser den Zugang zum Panel';
-$TEXT['activate_su_modify_pw'] = 'Erlaubten Superuser dürfen Kennwoerter von registrierte Benutzer aendern';
-$TEXT['activate_su_vserver_start'] = 'Erlaubte Superuser duerfen virtuelle Server starten/stoppen';
+$TEXT['activate_su_modify_pw'] = 'Erlaubten Superuser dürfen Kennwörter von registrierte Benutzer ändern';
+$TEXT['activate_su_vserver_start'] = 'Erlaubte Superuser dürfen virtülle Server starten/stoppen';
 $TEXT['activate_su_ru'] = 'Aktiviere die SuperUser_ru Klasse';
 $TEXT['activate_su_ru_info'] = 'Geben Sie Superuser die Rechte für registrierte Benutzer unter Bedingungen (siehe readme.txt)';
 $TEXT['reg_users'] = 'Registrierte Benutzer';
 $TEXT['activate_ru_login'] = 'Erlaube registrierten Benutzern den Zugang zum Panel';
-$TEXT['activate_ru_del_account'] = 'Erlaube registrierten Benutzern, Ihren Account zu loeschen';
-$TEXT['activate_ru_modify_login'] = 'Erlaube registrierten Benutzern, Ihre Zugangsdaten zu aendern';
+$TEXT['activate_ru_del_account'] = 'Erlaube registrierten Benutzern, Ihren Account zu löschen';
+$TEXT['activate_ru_modify_login'] = 'Erlaube registrierten Benutzern, Ihre Zugangsdaten zu ändern';
 
-$TEXT['vservers_logs'] = 'Virtuelle Server Logs';
+$TEXT['vservers_logs'] = 'Virtülle Server Logs';
 $TEXT['srv_logs_amount'] = 'Anzahl der Logs, die das Panel vom Server anzeigen soll';
-$TEXT['activate_vservers_logs_for_adm'] = 'Aktiviere das Log-Tab fuer Admins und SuperUser';
+$TEXT['activate_vservers_logs_for_adm'] = 'Aktiviere das Log-Tab für Admins und SuperUser';
 $TEXT['activate_adm_highlight_logs'] = 'Erlaube Admins und SuperUsers das Hightlighten der Logs';
 
 $TEXT['pma_logs'] = 'Panel Logs';
-$TEXT['pma_logs_infos'] = 'Optionen nur fuer SuperAdmin';
+$TEXT['pma_logs_infos'] = 'Optionen nur für SuperAdmin';
 $TEXT['logs_sa_actions'] = 'Log SuperAdmin Aktionen ( RootAdmin ausgeschlossen )';
-$TEXT['pma_logs_clean'] = 'Saeubere alte Logs ( in Tagen )';
+$TEXT['pma_logs_clean'] = 'Säubere alte Logs ( in Tagen )';
 
 $TEXT['tables'] = 'Tabelle';
 $TEXT['overview_table_lines'] = 'Anzahl der Server-Tabellen';
@@ -111,12 +111,12 @@ $TEXT['overview_table'] = 'Tabellen-Uebersicht';
 $TEXT['enable_users_total'] = 'Zeige die komplette Anzahl der Benutzer';
 $TEXT['enable_connected_users'] = 'Zeige verbundene Benutzer';
 $TEXT['enable_vserver_uptime'] = 'Zeige die vServer Uptime';
-$TEXT['sa_only'] = 'nur fuer SuperAdmins';
+$TEXT['sa_only'] = 'nur für SuperAdmins';
 
 $TEXT['srv_dropdown_list'] = 'Server DropDown Liste';
 $TEXT['activate_auth_dropdown'] = 'Aktiviere die DropDown-Liste der Server auf der Loginseite';
-$TEXT['activate_auth_dropdown_info'] = 'Dies bedeutet, dass alle erreichbaren Server-IDs in dem HTML-Quellcode der Loginseite angezeigt werden!';
-$TEXT['refresh_ddl_cache'] = 'Automatische Erneuerung der DropDown-Serverliste (Cache). Zeit in Stunden';
+$TEXT['activate_auth_dropdown_info'] = 'Dies bedeutet, dass alle erreichbaren Server-IDs in dem HTML-Qüllcode der Loginseite angezeigt werden!';
+$TEXT['refresh_ddl_cache'] = 'Automatische Erneürung der DropDown-Serverliste (Cache). Zeit in Stunden';
 $TEXT['ddl_show_cache_uptime'] =  'Zeige Cache-Uptime';
 
 $TEXT['autoban'] = 'Autoban';
@@ -133,7 +133,7 @@ $TEXT['external_viewer'] = 'Externer Viewer';
 $TEXT['see_external_viewer'] = 'Siehe Externer Viewer';
 $TEXT['external_viewer_enable'] = 'Aktiviere Externer Viewer';
 $TEXT['external_viewer_width'] = 'Viewer Breite';
-$TEXT['external_viewer_height'] = 'Viewer Hoehe';
+$TEXT['external_viewer_height'] = 'Viewer Höhe';
 $TEXT['external_viewer_vertical'] = 'Align verticaly viewers';
 $TEXT['external_viewer_scroll'] = 'Aktiviere Scrollbars im Viewer';
 

@@ -40,8 +40,8 @@ $TEXT['usersperchannel_info'] = 'Maximum number of concurrent clients allowed fo
 $TEXT['rememberchannel_info'] = 'If enabled, registered users will join the last channel they were in when they reconnect to the server.';
 $TEXT['opusthreshold_info'] = 'Amount of users with Opus support needed to force Opus usage, in percent.<br>0 = Always enable Opus.<br>100 = enable Opus if it\'s supported by all clients.';
 $TEXT['channelnestinglimit_info'] = 'Maximum depth of channel nesting. Note that some databases like MySQL using InnoDB will fail when operating on deeply nested channels.';
-$TEXT['suggestpositional_info'] = 'Setting this to "enabled" will alert any user who does not have positional audio enabled that the server administrators recommend enabling it.<br>Setting it to "disabled" will have the opposite effect<br>If you do not care whether the user enables positional audio or not, set it to blank.';
-$TEXT['suggestpushtotalk_info'] = 'Setting this to "enabled" will alert any user who does not have Push-To-Talk enabled that the server administrators recommend enabling it.<br>Setting it to "disabled" will have the opposite effect<br>If you do not care whether the user enables PTT or not, set it to blank.';
+$TEXT['suggestpositional_info'] = 'Setting this to "enabled" will alert any user who dös not have positional audio enabled that the server administrators recommend enabling it.<br>Setting it to "disabled" will have the opposite effect<br>If you do not care whether the user enables positional audio or not, set it to blank.';
+$TEXT['suggestpushtotalk_info'] = 'Setting this to "enabled" will alert any user who dös not have Push-To-Talk enabled that the server administrators recommend enabling it.<br>Setting it to "disabled" will have the opposite effect<br>If you do not care whether the user enables PTT or not, set it to blank.';
 
 $TEXT['reset_param'] = 'Reset %s setting'; // %s = setting key
 $TEXT['enable'] = 'Enable';

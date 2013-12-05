@@ -29,6 +29,6 @@ $TEXT['install_welcome_msg'] = 'Willkommen zum phpMumbleAdmin.<br><br>Die Instal
 $TEXT['install_note'] = 'Hinweis: Wenn einen ICE-Fehler nach der Installation aufgetritt, verbinden Sie sich mit dem Superadmin-Konto, um das Problem zu beheben ';
 $TEXT['sa_login'] = 'SuperAdmin Login';
 $TEXT['install_success'] = 'Der SuperAdmin Account wurde erfolgreich eingerichtet';
-$TEXT['install_to_finish'] = 'Um die Installation erfolgreich zu beenden, loeschen Sie den /install/ Ordner, oder benennen Sie ihn um.';
+$TEXT['install_to_finish'] = 'Um die Installation erfolgreich zu beenden, löschen Sie den /install/ Ordner, oder benennen Sie ihn um.';
 
 ?>

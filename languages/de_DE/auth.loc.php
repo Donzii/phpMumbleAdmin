@@ -21,21 +21,21 @@
 $TEXT['Authentication'] = 'Authentifikation';
 $TEXT['pw'] = 'Passwort';
 $TEXT['server'] = 'Server';
-$TEXT['select_server'] = 'Server auswaehlen';
+$TEXT['select_server'] = 'Server auswählen';
 $TEXT['enter'] = 'Enter';
 $TEXT['gen_pw'] = 'Passwort generieren';
 $TEXT['request_dont_exists'] = 'Diese Anfrage existiert nicht.';
-$TEXT['new_generated_pw'] = 'Ein neues Passwort wurde fuer Ihren Account generiert:';
+$TEXT['new_generated_pw'] = 'Ein neues Passwort wurde für Ihren Account erstellt:';
 $TEXT['back_auth_page'] = 'Zurück zur Loginseite';
 
 // Generate password email
 $TEXT['ice_profile_name'] = 'PHP-Ice Profil : %s'; // %s = profile name
 $TEXT['server_name'] = 'Mumble Server : %s'; // %s = server id & name
 
-$TEXT['pw_mail_title'] = 'Mumble Passwort Generierungs-Anfrage ( %s )'; // %s = Site web address
+$TEXT['pw_mail_title'] = 'Mumble Passwort Erstellungs-Anfrage ( %s )'; // %s = Site web address
 $TEXT['pw_mail_body_1'] = 'Wenn Sie nicht wissen, warum Sie diese Email erhalten haben oder Sie haben kein neues Mumble-Passwort angefragt, ignorieren Sie diese Email einfach.';
-$TEXT['pw_mail_body_2'] = 'Bitte bestaetigen Sie Ihr neues Mumble-Passwort unter folgendem Link:';
-$TEXT['pw_mail_body_3'] = 'Dieser Link steht Ihnen %d Stunden zur Verfuegung und leitet Sie zu Ihrem neuen Passwort'; // %d = delay time
+$TEXT['pw_mail_body_2'] = 'Bitte bestätigen Sie Ihr neues Mumble-Passwort unter folgendem Link:';
+$TEXT['pw_mail_body_3'] = 'Dieser Link steht Ihnen %d Stunden zur Verfügung und leitet Sie zu Ihrem neuen Passwort'; // %d = delay time
 
 
 

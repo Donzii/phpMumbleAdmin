@@ -18,16 +18,16 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['add_ban'] = 'Add a new ban';
-$TEXT['started'] = 'Started';
-$TEXT['cert_included'] = 'Certificate included';
-$TEXT['del_ban'] = 'Delete the ban';
-$TEXT['confirm_del_ban'] = 'Do you confirm to delete the ban?';
-$TEXT['invalid_mask'] = 'Invalid bit mask';
+$TEXT['add_ban'] = 'Ban hinzufügen';
+$TEXT['started'] = 'Gestartet';
+$TEXT['cert_included'] = 'Zertifikat enthalten';
+$TEXT['del_ban'] = 'Ban löschen';
+$TEXT['confirm_del_ban'] = 'Diesen Ban wirklich löschen?';
+$TEXT['invalid_mask'] = 'Ungültige Eingabe';
 $TEXT['bitmask'] = 'Bit mask';
-$TEXT['bitmask_info'] = 'IPv4 : 1 to 32<br>IPv6 : 1 to 128<br>Let this empty or give the higher value for ban the IP address only';
-$TEXT['reason'] = 'Reason';
-$TEXT['edit_ban'] = 'Edit ban';
+$TEXT['bitmask_info'] = 'IPv4 : 1 bis 32<br>IPv6 : 1 bis 128<br>Lassen Sie diese leer oder gebe einen höheren Wert für den Ban ein. Nur für die die Ban-IP-Adresse';
+$TEXT['reason'] = 'Grund';
+$TEXT['edit_ban'] = 'Ban bearbeiten';
 
 
 ?>

@@ -19,30 +19,30 @@
  */
 
 $TEXT['online'] = 'Online';
-$TEXT['user_is_online'] = 'User is online... Click to watch the session';
+$TEXT['user_is_online'] = 'Benutzer ist online... Anklicken um die Session zu beobachten';
 $TEXT['offline'] = 'Offline';
 
-$TEXT['have_a_comm'] = 'Registration have a comment';
-$TEXT['have_a_cert'] = 'Registration have a certificate';
-$TEXT['no_comment'] = 'No comment';
-$TEXT['user_avatar'] = 'User avatar';
-$TEXT['no_avatar'] = 'No avatar';
+$TEXT['have_a_comm'] = 'Registrierung hat einen Kommentar';
+$TEXT['have_a_cert'] = 'Registrierung hat ein Zertifikat';
+$TEXT['no_comment'] = 'Kein Kommentar';
+$TEXT['user_avatar'] = 'Benutzer Avatar';
+$TEXT['no_avatar'] = 'Kein Avatar';
 
-$TEXT['cert_email_info'] = 'Registration with a certificate.<br>Note that\'s if the certificate have an email, the registration will be updated with the certificate address when user connect to server.';
+$TEXT['cert_email_info'] = 'Registrierung mit einem zertifikat.<br>Beachten Sie, dass, wenn das Zertifikat eine E-Mail-Adresse enthält, wird die Registrierung mit dem Zertifikat-Adresse aktualisiert, wenn der Benutzer mit dem Server sich verbinden.';
 
-$TEXT['add_acc'] = 'Add a new account';
-$TEXT['add_acc_redirect'] = 'Redirect to the new account';
+$TEXT['add_acc'] = 'Neün Account anlegen';
+$TEXT['add_acc_redirect'] = 'Redirect zu einem neün Account';
 
-$TEXT['comment'] = 'Comment';
+$TEXT['comment'] = 'Kommentar';
 
-$TEXT['modify_login'] = 'Modify login';
-$TEXT['modify_pw'] = 'Modify password';
-$TEXT['modify_email'] = 'Modify email';
-$TEXT['modify_comm'] = 'Modify comment';
-$TEXT['delete_acc'] = 'Delete account';
-$TEXT['delete_avatar'] = 'Delete avatar';
+$TEXT['modify_login'] = 'Login ändern';
+$TEXT['modify_pw'] = 'Password ändern';
+$TEXT['modify_email'] = 'Email ändern';
+$TEXT['modify_comm'] = 'Kommentar ändern';
+$TEXT['delete_acc'] = 'Account löschen';
+$TEXT['delete_avatar'] = 'Avatar löschen';
 
-$TEXT['confirm_delete_acc'] = 'Do you confirm to delete this account?';
-$TEXT['confirm_delete_avatar'] = 'Do you confirm to delete avatar ?';
+$TEXT['confirm_delete_acc'] = 'Sie sind sich sicher, das dieser Account gelöscht werden soll?';
+$TEXT['confirm_delete_avatar'] = 'Sie sind sich sicher, den Avatar zu löschen?';
 
 ?>

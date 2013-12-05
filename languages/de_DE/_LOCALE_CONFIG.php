@@ -2,7 +2,7 @@
 
 /*
 
-Übersetzung noch nicht vollstaendig!
+Übersetzung noch nicht vollständig!
 
 */
 

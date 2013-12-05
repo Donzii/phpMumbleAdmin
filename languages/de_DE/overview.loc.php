@@ -20,20 +20,20 @@
 
 $TEXT['total_srv'] = 'Anzahl der Server: %s'; // Total of virtuals servers
 $TEXT['total_users'] = 'Anzahl der Benutzer: %s'; // Total of online users
-$TEXT['confirm_del_server'] = 'Sie wollen wirklich den kompletten virtuelle Server #%d loeschen, incl. seiner Daten?'; // %d = server ID
+$TEXT['confirm_del_server'] = 'Sie wollen wirklich den kompletten virtülle Server #%d löschen, incl. seiner Daten?'; // %d = server ID
 $TEXT['msg_all_srv'] = 'Nachricht an alle Server';
-$TEXT['add_srv'] = 'Virtuellen Server hinzufuegen';
-$TEXT['webaccess_on'] = 'Web-basierter Zugriff für die Benutzer des virtuellen Servers ist zurzeit aktiviert ... Klicken Sie dieses Symbol, um dies zu deaktivieren. Denken Sie daran, die PMA-Optionen ebenso zu bearbeiten';
-$TEXT['webaccess_off'] = 'Web-basierter Zugriff für die Benutzer des virtuellen Servers ist zurzeit deaktiviert... Klicken Sie dieses Symbol, um zu aktivieren';
+$TEXT['add_srv'] = 'Virtüllen Server hinzufügen';
+$TEXT['webaccess_on'] = 'Web-basierter Zugriff für die Benutzer des virtüllen Servers ist zurzeit aktiviert ... Klicken Sie dieses Symbol, um dies zu deaktivieren. Denken Sie daran, die PMA-Optionen ebenso zu bearbeiten';
+$TEXT['webaccess_off'] = 'Web-basierter Zugriff für die Benutzer des virtüllen Servers ist zurzeit deaktiviert... Klicken Sie dieses Symbol, um zu aktivieren';
 $TEXT['srv_name'] = 'Servername';
-$TEXT['del_srv'] = 'Virtuellen Server loeschen';
-$TEXT['confirm_reset_srv'] = 'Komplettes Zuruecksetzen des virtuellen Servers #%d?'; // %d = server ID
-$TEXT['reset_srv_info'] = 'Komplettes Ruecksetzen der Konfiguration des virtuellen Servers: Entfernt alle Kanäle, registrierte Benutzer, Bans, ACLs, Gruppen und änderte das Superuser-Passwort';
-$TEXT['generate_su_pw'] = 'Neues Passwort fuer den SuperUser generieren?';
-$TEXT['mass_settings'] = 'Bearbeitung eines Parameters fuer alle Server';
-$TEXT['select_setting'] = 'Waehlen Sie einen Parameter';
+$TEXT['del_srv'] = 'Virtüllen Server löschen';
+$TEXT['confirm_reset_srv'] = 'Komplettes Zurücksetzen des virtüllen Servers #%d?'; // %d = server ID
+$TEXT['reset_srv_info'] = 'Komplettes Rücksetzen der Konfiguration des virtüllen Servers: Entfernt alle Kanäle, registrierte Benutzer, Bans, ACLs, Gruppen und änderte das Superuser-Passwort';
+$TEXT['generate_su_pw'] = 'Neüs Passwort für den SuperUser generieren?';
+$TEXT['mass_settings'] = 'Bearbeitung eines Parameters für alle Server';
+$TEXT['select_setting'] = 'Wählen Sie einen Parameter';
 $TEXT['confirm_with_word'] = 'Bitte bestätigen Sie das Wort "%s"'; // %s = confirm word
-$TEXT['confirm_word'] = 'bestaetigt!'; // This is the confirm word for $TEXT['confirm_with_word'], case sensitive, 4 characters minimum required.
+$TEXT['confirm_word'] = 'bestätigt!'; // This is the confirm word for $TEXT['confirm_with_word'], case sensitive, 4 characters minimum required.
 $TEXT['default_settings'] = 'Standard-Einstellungen';
 
 ?>

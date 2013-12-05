@@ -18,15 +18,15 @@
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['modify_login'] = 'Modify your login';
-$TEXT['modify_pw'] = 'Modify your password';
-$TEXT['modify_email'] = 'Modify your email';
-$TEXT['modify_comm'] = 'Modify your comment';
-$TEXT['delete_acc'] = 'Delete your account';
-$TEXT['delete_avatar'] = 'Delete your avatar';
+$TEXT['modify_login'] = 'Login ändern';
+$TEXT['modify_pw'] = 'Passwort ändern';
+$TEXT['modify_email'] = 'Email ändern';
+$TEXT['modify_comm'] = 'Kommentar ändern';
+$TEXT['delete_acc'] = 'Account löschen';
+$TEXT['delete_avatar'] = 'Avatar löschen';
 
-$TEXT['enter_your_pw'] = 'Enter your password';
-$TEXT['confirm_delete_acc'] = 'Do you confirm to delete your account?';
-$TEXT['confirm_delete_avatar'] = 'Do you confirm to delete your avatar ?';
+$TEXT['enter_your_pw'] = 'Passwort bitte eingeben';
+$TEXT['confirm_delete_acc'] = 'Sie sind sich sicher, das dieser Account gelöscht werden soll?';
+$TEXT['confirm_delete_avatar'] = 'Sie sind sich sicher, den Avatar zu löschen?';
 
 ?>
