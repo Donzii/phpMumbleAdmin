@@ -33,7 +33,7 @@ case "$1" in
 
 		if test -f $PIDFILE; then
 			PID="`cat $PIDFILE`"
-   			echo "PID-File vorhanden. Prozess-ID '$PID' . Server abgestürzt?"
+			echo "PID-File vorhanden. Prozess-ID '$PID' . Server abgestürzt?"
 		elif test $PIDFILE; then
 			echo "Prozess-ID und PID-File nicht vorhanden, starte den $NAME"
 			
@@ -68,7 +68,7 @@ case "$1" in
 		echo "$NAME '$PID' wird gestoppt ..."
 		kill $PID
 		killall -9 $COMMAND
-   		rm -f $PIDFILE
+		rm -f $PIDFILE
 		touch $PIDFILE
 		chmod 750 $COMMAND
 		sleep 5
