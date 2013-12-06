@@ -15,14 +15,18 @@
 #	Name der für das Script ausgeben wird
 NAME="Mumble Server"
 
-#	Das Startcommando
+#	Arbeitsverzeichnis für Murmur
+BASEDIR="/home/mumble"
+
+#	Das Startcommando für Murmur
 COMMAND="murmur.x86"
 
 #	Die ini-Daten von murmur
 INI=murmur.ini
 
-#	Hier bewahrt das Script den PID auf um später den Server wieder stoppen zu können
+#	Hier bewahrt das Script den Murmur-PID auf um später den Server wieder stoppen zu können
 PIDFILE=murmur.pid
+
 
 #########################################################################
 # DONT EDIT BELOW THIS LINE!!! Broken Server is the reason !!!          #
@@ -30,13 +34,12 @@ PIDFILE=murmur.pid
 
 case "$1" in
 	start)
-
+		cd $BASEDIR
 		if test -f $PIDFILE; then
 			PID="`cat $PIDFILE`"
-			echo "PID-File vorhanden. Prozess-ID '$PID' . Server abgestürzt?"
+   			echo "PID-File vorhanden. Prozess-ID '$PID' . Server abgestürzt?"
 		elif test $PIDFILE; then
 			echo "Prozess-ID und PID-File nicht vorhanden, starte den $NAME"
-			
 			rm -f murmur.log
 			touch murmur.log
 			touch $PIDFILE
@@ -49,6 +52,7 @@ case "$1" in
 ;;
 
 	stop)
+		cd $BASEDIR
 		if test -f $PIDFILE; then
 			echo "Stoppe den $NAME"
 			PID="`cat $PIDFILE`"
@@ -64,14 +68,16 @@ case "$1" in
 ;;
 
 	restart)
+		cd $BASEDIR
 		PID="`cat $PIDFILE`"
 		echo "$NAME '$PID' wird gestoppt ..."
 		kill $PID
 		killall -9 $COMMAND
-		rm -f $PIDFILE
+   		rm -f $PIDFILE
 		touch $PIDFILE
 		chmod 750 $COMMAND
 		sleep 5
+		cd $BASEDIR
 		./$COMMAND -ini $INI
 		PID="`cat $PIDFILE`"
 		echo "$NAME erfolgreich wieder hergestellt. Prozess-ID '$PID'"
