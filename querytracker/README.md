@@ -1,12 +1,13 @@
 
-===============================================================================
 gtmurmur - GameTracker Murmur Plugin
-Copyright 2011 - Andrew Davis / GameTracker / adavis |at| gameservers |dot| com
-http://www.gametracker.com/downloads/gtmurmurplugin.php
-===============================================================================
 
-==============
-=  OVERVIEW  =
+Copyright 2011 - Andrew Davis / GameTracker / adavis |at| gameservers |dot| com
+
+http://www.gametracker.com/downloads/gtmurmurplugin.php
+
+
+
+OVERVIEW  
 ==============
 
 This program is designed to run alongside Murmur to create a public server
@@ -32,15 +33,15 @@ Mumble server plugin from the GameTracker team which allows a mumble server to b
 - Release date: 01-24-2013
 
 
-===============
-=  LICENSING  =
+
+LICENSING  
 ===============
 
 All licensing info is included in license.txt.
 
 
-=============
-=  CHANGES  =
+
+CHANGES  
 =============
 
 1.2.0 - 1/23/2013
@@ -60,8 +61,8 @@ All licensing info is included in license.txt.
 - Initial release.
 
 
-=======================
-= SYSTEM REQUIREMENTS =
+
+SYSTEM REQUIREMENTS 
 =======================
 
 * Windows: Windows XP, Vista, 7, 8, Server 2003, Server 2008
@@ -72,8 +73,8 @@ builds have a '-static' suffix. These builds do not benefit from OS security
 updates, but are compatible with more flavors of your OS.
 
 
-=================
-=  QUICK SETUP  =
+
+QUICK SETUP  
 =================
 
 These steps should get you some quick satisfaction. It is important to read
@@ -126,8 +127,8 @@ of your Murmur server. If you get an error, check that gtmurmur is running,
 you updated murmur.ini correctly, and you have opened your firewall.
 
 
-===========
-=  USAGE  =
+
+USAGE  
 ===========
 
 gtmurmur [-conf FILE]
@@ -166,8 +167,8 @@ the IP address and port. A textual error is printed on the screen within 5
 seconds.
 
 
-===================
-=  CONFIGURATION  =
+
+CONFIGURATION
 ===================
 
 The following lines should be added to the gtmurmur configuration file. Please
@@ -224,8 +225,7 @@ Murmur 1.2.3.
 * The default value is "FALSE".
 
 
-==============
-=  SECURITY  =
+SECURITY  
 ==============
 
 Enabling Murmur's ICE server raises some security concerns. Since ICE is
@@ -237,8 +237,8 @@ plaintext password was added to help secure the ICE connection.
 Read the Murmur and ICE documentation for more information.
 
 
-==============
-=  FIREWALL  =
+
+FIREWALL
 ==============
 
 To help paint a picture on network usage, running gtmurmur alongside of Murmur
@@ -253,8 +253,8 @@ TCP		1.2.3.4		27800		(Used by gtmurmur for query server)
 server.
 
 
-=======================
-=  GTMURMUR PROTOCOL  =
+
+GTMURMUR PROTOCOL  
 =======================
 
 This section describes the network protocol understood by gtmurmur.
