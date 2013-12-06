@@ -1,4 +1,3 @@
-
 gtmurmur - GameTracker Murmur Plugin
 
 Copyright 2011 - Andrew Davis / GameTracker / adavis |at| gameservers |dot| com
@@ -26,8 +25,7 @@ gtmurmur aims to be compatible with Murmur versions 1.2.0 and onward.
 
 
 Mumble server plugin from the GameTracker team which allows a mumble server to be scanned by GameTracker.
-- Compatible with Windows (XP, Vista, 7, Server 2003, Server 2008)
-- Compatible with Linux (RHEL/Centos 5)
+- Compatible with Linux (RHEL/Centos 5, Debian)
 - Current version: 1.2.0
 - Works with Mumble 1.2.0 - 1.2.4
 - Release date: 01-24-2013
@@ -65,7 +63,6 @@ CHANGES
 SYSTEM REQUIREMENTS 
 =======================
 
-* Windows: Windows XP, Vista, 7, 8, Server 2003, Server 2008
 * Linux: CentOS 5.0 (compatible, or newer).
 
 Static and dynamic builds of each program is included for each OS. Static
@@ -105,7 +102,7 @@ gtmurmur_use_ice_sdk=FALSE
 8. Restart Murmur.
 
 9. Jot down the absolute path to your Murmur server. E.g:
-"C:\Program Files (x86)\Murmur\" or "/home/someuser/murmur".
+"/home/someuser/murmur".
 
 10. Open a command prompt or shell.
 
