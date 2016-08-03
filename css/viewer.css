@@ -1,0 +1,55 @@
+
+/**
+* Reset navigator setting
+*/
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    vertical-align: baseline;
+}
+
+.viewer {
+    margin-left: 370px;
+    cursor: default;
+    line-height: 16px;
+}
+.viewer p {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.viewer p,
+.viewer p a,
+.viewer p span {
+    /**
+    * MEMO: Prevent to break lines with empty block.
+    */
+    height: 16px;
+    line-height: 14px;
+}
+.viewer p a {
+    display: block;
+    text-decoration: none;
+}
+.viewer span.deepIcons {
+    float: left;
+    margin-right: 10px;
+}
+.viewer span.text {
+    display: block;
+    overflow: hidden;
+    white-space: pre;
+    /**
+    * MEMO: Center the text vertically
+    */
+    line-height: 18px;
+}
+.viewer span.text.root,
+.viewer span.text.user {
+    font-weight: bold;
+}
+.viewer span.statusIcons {
+    float: right;
+}

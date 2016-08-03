@@ -1,0 +1,750 @@
+
+ /*
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+/**
+* Reset navigator default settings
+*/
+html, body, div, span, a, img, b, i, nav, ul, li,
+form, label, iframe, table, tr, th, td, p,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    vertical-align: baseline;
+}
+/**
+* HTML tags
+*/
+html {
+    height: 100%;
+    width: 100%;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    line-height: normal;
+}
+body {
+    min-width: 870px;
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+}
+legend {
+    font-weight: bold;
+}
+@-moz-document url-prefix() {
+    fieldset {
+        /* workaround for firefox and scroll */
+        display: table-cell;
+    }
+}
+main {
+    /* workaround for opera */
+    display: block;
+}
+nav, ul {
+    list-style: none;
+    list-style-position: inside;
+}
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: underline;
+    white-space: nowrap;
+}
+a:hover {
+    text-decoration: none;
+}
+mark {
+    color: inherit;
+}
+table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    margin: auto;
+}
+table.config {
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+table.config th {
+    text-align: right;
+}
+table.config input.small {
+    width: 50px;
+}
+tr {
+    height: 26px;
+}
+tr.small {
+    height: 20px;
+}
+tr.pad {
+    height: 5px !important;
+}
+tr.invisible {
+    height: 0px;
+}
+tr.invisible th {
+    border: 0px;
+}
+th {
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid black;
+    padding: 0px 10px;
+}
+th.id {
+    width: 40px;
+    text-align: center;
+    padding: 0px;
+}
+th.icon {
+    width: 28px;
+    text-align: center;
+    padding: 0px;
+}
+th.small {
+    width: 80px;
+}
+th.large {
+    width: 140px;
+}
+th.vlarge {
+    width: 200px;
+}
+td {
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 0px 10px;
+    border: 1px solid black;
+}
+table.tdwrap td {
+    white-space: normal;
+}
+td.id {
+    font-weight: bold;
+    text-align: right;
+    padding: 0px;
+    padding-right: 5px;
+}
+td.icon {
+    text-align: center;
+    padding: 0px;
+}
+td.icon.tooltip {
+    overflow: visible;
+}
+td.selection a {
+    /* feet with tr height to get the whole box */
+    min-height: 26px;
+    /* center the text */
+    line-height: 26px;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    /* remove td padding */
+    margin: 0px -10px;
+    padding: 0px 10px;
+}
+td.selection.large a {
+    /* This break lines on large selection, remove it */
+    line-height: normal;
+}
+td.selection a .text {
+    white-space: pre;
+}
+td.selection a mark {
+    background: none;
+    font-weight: bold;
+}
+td.selection a time {
+    font-style: italic;
+}
+td.hide {
+    border: 0px;
+}
+td .button {
+    padding: 2px;
+}
+/**
+* Inputs
+*/
+select {
+    background: white; /* linux */
+}
+input,
+select,
+textarea {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    vertical-align: middle;
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    padding-left: 5px;
+    width: 250px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid black;
+}
+input.small {
+    width: 30px
+}
+input.medium {
+    width: 50px
+}
+select {
+    width: 258px;
+}
+textarea {
+    resize: none;
+    width: 99.5%;
+}
+meter {
+    display: block;
+    width: 100%;
+}
+iframe {
+    width: 99%;
+    border: 2px dotted black;
+}
+:invalid {
+    box-shadow: none;
+}
+
+/***************************
+ MISC CLASSES
+***************************/
+
+.clear {
+    clear: both;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+/* ACTION BOXS */
+.actionBox {
+    margin: 40px auto;
+    padding: 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.actionBox .button.cancel {
+    float: right;
+    margin-top: -30px;
+    margin-right: 3px;
+}
+.actionBox h3 {
+    font-size: 12px;
+    height: 16px;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    padding: 2px 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: move;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.actionBox h3 span,
+.actionBox h3 label {
+    white-space: pre;
+}
+.actionBox .body {
+    text-align: center;
+    margin: 10px 0px;
+}
+.actionBox .body table {
+    text-align: left;
+}
+.actionBox .submit {
+    margin-right: 30px;
+    text-align: right;
+}
+.actionBox .submit input.focus {
+    font-weight: bold;
+}
+.actionBox .scroll {
+    height: 300px;
+    margin: 10px 0px;
+    text-align: left;
+}
+.actionBox.alert {
+    font-size: 13px;
+}
+.actionBox.small {
+    width: 400px;
+}
+.actionBox.medium {
+    width: 600px;
+}
+.actionBox.auth {
+    width: 500px;
+    text-align: left;
+}
+.actionBox.auth table {
+    margin: 10px 0px;
+}
+.actionBox.auth th {
+    width: 150px;
+}
+.actionBox.auth div.passwordRequest {
+    text-align: right;
+}
+.actionBox.auth div.passwordRequest a {
+    font-weight: bold;
+    margin-right: 10px;
+}
+/* Specific to JS actionBoxs */
+#jsBackground {
+    position: absolute;
+    z-index: 99998;
+    background-image: url( '../images/pma/smokedBG.png' );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.actionBox.js {
+    position: fixed;
+    z-index: 99999;
+    top: 35%;
+    margin: auto;
+    width: 400px;
+    box-shadow: 10px 10px 20px black;
+}
+.actionBox.js.medium {
+    width: 600px;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.button:hover {
+    outline: 1px solid black;
+}
+.button:active {
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+
+/* CAPTIONS */
+.caption {
+    margin: 5px 0px;
+}
+.caption span.inside {
+    padding: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.caption span.inside span.title {
+    font-weight: bold;
+}
+.caption span.inside .tooltip img {
+    margin-left: 0px;
+}
+
+/* DEBUG BOX */
+.debug {
+    margin-top: 10px;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.debug h3 {
+    font-size: 13px;
+    margin: 5px 0px;
+}
+.debug mark.sessid {
+    background: none;
+}
+.debug span.level {
+    font-weight: bold;
+}
+.debug span.class,
+.debug span.method,
+.debug span.core {
+    font-weight: bold;
+}
+.debug span.array {
+    font-weight: bold;
+    font-style: italic;
+}
+.debug span.key {
+    font-weight: bold;
+}
+.debug .error {
+    color: red;
+    font-weight: bold;
+}
+.debug p span {
+    white-space: pre;
+}
+
+/* DESCRIPTION BOX */
+.description {
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+    cursor: default;
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+.description img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* EXPAND MENU */
+.expand {
+    float: left;
+    position: relative;
+    cursor: default;
+}
+.expand ul {
+    z-index: 500;
+    display: none;
+    position: absolute;
+    padding: 10px 0px;
+    background: white;
+    text-align: left;
+    line-height: 16px;
+    min-width: 200px;
+    box-shadow: 1px 1px 5px black;
+}
+.expand:hover ul {
+    display: block;
+}
+.expand ul li {
+    padding: 5px 10px;
+}
+.expand ul li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    /* remove ul li padding */
+    margin: -5px -10px;
+    padding: 5px 10px;
+}
+.expand ul li a img {
+    margin-right: 5px;
+}
+
+/* FILLS */
+.fill {
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0px 5px;
+    padding: 2px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: 2px 2px 4px #888888;
+}
+.fill.right {
+    text-align: right;
+}
+.fill.occasional {
+    font-weight: bold;
+}
+.fill mark {
+    font-weight: bold;
+    background: transparent;
+}
+.fill img.button {
+    width: 14px;
+    height: 14px;
+}
+
+/* HELP */
+.help {
+    cursor: help;
+    font-style: italic;
+}
+
+/* INFORMATIONS BOXS */
+.information {
+    margin: auto;
+    padding: 10px 20px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.information h3 {
+    margin-top: -15px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+}
+.information h3 span {
+    padding: 3px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 2px;
+}
+.information.confirmPw {
+    width: 400px;
+    margin-top: 100px;
+}
+.information .newPw {
+    font-size: 24px;
+    padding: 2px 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* MESSAGES BOXS */
+.messageBox {
+    padding: 5px;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 13px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.messageBox .inside {
+    width: 550px;
+    margin: auto;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.messageBox .inside h3 {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    cursor: default;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.messageBox .inside .button {
+    float: right;
+}
+.messageBox .inside p {
+    padding: 1px 5%;
+}
+
+/* ONLINE USERS */
+.onlineUsers cite {
+    font-weight: bold;
+}
+
+/* SCROLL */
+.scroll {
+    overflow: auto;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.scroll input.chkbox {
+    float: left;
+}
+.scroll label {
+    display: block;
+    overflow: hidden;
+    white-space: pre;
+    line-height: 20px;
+    padding: 0px 5px;
+}
+
+/* TOOLBAR */
+.toolbar {
+    margin: 10px 0px;
+    min-height: 24px;
+    padding: 3px 5px;
+    font-weight: bold;
+    /* vertical align */
+    line-height: 24px;
+}
+.toolbar .subtab li {
+    display: inline;
+    padding: 0px 10px;
+}
+.toolbar .subtab li.selected {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border: 1px solid black;
+}
+.toolbar .button {
+    padding: 0px 5px;
+    margin: 0px 2px;
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+.tooltip img {
+    margin: 0px 5px;
+}
+.tooltip span.desc {
+    /* The tooltip must be over misc elements */
+    z-index: 500;
+    display: none;
+    position: absolute;
+    padding: 10px;
+    bottom: 35px;
+    right: -250px;
+    width: 250px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+    word-wrap: break-word;
+    white-space: normal;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px #888888;
+}
+.tooltip:hover span.desc {
+    display: block;
+}
+.tooltip.right span.desc {
+    left: -250px;
+}
+
+/* TABLE PAGING MENU */
+.tablePaging {
+    font-weight: bold;
+    margin: 5px 0px;
+}
+.tablePaging a, div.tablePaging span.nolink {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 20px;
+    height: 20px;
+    /* center text */
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+}
+.tablePaging .selected {
+    padding: 2px;
+}
+.tablePaging .first {
+    margin-left: 10px;
+}
+.tablePaging .prev {
+    margin-right: 10px;
+}
+.tablePaging .next {
+    margin-left: 10px;
+}
+.tablePaging .last {
+    margin-right: 10px;
+}
+.tablePaging .total {
+    padding: 0px 5px;
+}
+.tablePaging img {
+    /* Vertical center with the span */
+    padding-top: 2px;
+}
+/* Go */
+.tablePaging form.go {
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 2px;
+}
+

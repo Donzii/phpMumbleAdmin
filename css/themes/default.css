@@ -1,461 +1,462 @@
 
  /*
- *    phpMumbleAdmin (PMA), a php web administration tool for murmur ( mumble server daemon ).
- *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
  *
- *    This program is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *    This program is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/**************
- DEFAULTS
-**************/
-
- html {
-	color: #5d0000;
-	background: #e7e7e7;
+html {
+    color: #5d0000;
+    background: #d4d0c8;
 }
-
 a {
-	color: #5d0000;
+    color: #5d0000;
 }
-
-img.on {
-	background: #00ff00; /* Flashy green */
+a.mailto {
+    color: black;
 }
-
-img.off {
-	background: #5d0000;
+a.on, img.on {
+    background: #00ff00; /* Flashy green */
 }
-
+a.off, img.off {
+    background: #5d0000;
+}
+/**
+* Tables
+*/
 table {
-	background: white;
+    background: white;
 }
-
+table.config {
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
 tr:hover td.id {
-	background: #dbdbdb;
+    background: #dbdbdb;
 }
-
 th {
-	background: #dbdbdb;
-	border-color: #dbdbdb;
+    background: #dbdbdb;
+    border-color: #dbdbdb;
 }
-
 th.title {
-	background: #5d0000;
-	border-color: transparent;
-	color: #f6f6f6;
+    background: #5d0000;
+    border-color: transparent;
+    color: #f6f6f6;
 }
-
 td {
-	border-color: #dbdbdb;
-	background: #f6f6f6;
+    border-color: #dbdbdb;
+    background: #f6f6f6;
 }
-
 td.hide {
-	background: none;
+    background: none;
+}
+td.selection a:hover {
+    background: #dbdbdb;
+}
+td.selection a .info {
+    color: gray;
+}
+td.selection a time {
+    color: gray;
+}
+/**
+* Inputs
+*/
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+    outline-color: #5d0000;
+    background: lightyellow;
 }
 
-td .info {
-	color: gray;
+iframe {
+    border: 2px dotted #b2b2b2;
+    background: lightyellow;
 }
 
-td.selection:hover {
-	background: #dbdbdb;
-}
-
-#overview .selected {
-	color: #f6f6f6;
-	background: #5d0000;
-}
-
-.email a {
-	color: black;
-}
-
-/* Remove ? */
-input[type=text]:hover, input[type=password]:hover, textarea:hover {
-	outline-color: gray;
-}
-
-input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus  {
-	outline-color: #5d0000;
-	background: lightyellow;
-}
-
-/*****************************
- COMMON TEXT COLORZ
-*****************************/
-.fushia {
-	color: #7F007F;
-}
-
-.maroon {
-	color: #5d0000;
-}
-
-/* Color schema for safe / warn / unsafe */
-.safe {
-	color: green;
-}
-
-.warn {
-	color: darkorange;
-}
-
-.unsafe {
-	color: red;
-}
-
-/***************************
- COMMON CLASSES
-***************************/
-.button:hover {
-	outline-color: #FBB117;
-}
-
-.button {
- color: black;
-}
-
-/* table_paging */
-.table_paging a, .table_paging span {
-	color: gray;
-	border-color: gray;
-	background: #dbdbdb;
-}
-
-.table_paging a:hover {
-	background: #f6f6f6;
-}
-
-.table_paging span.selected {
-	color: #f6f6f6;
-	background: #5d0000;
-	border-color: #f6f6f6;
-}
-
-.debug {
-	background: #ffe8ec; /* simily pink */
-}
-
-.black {
-	color: black;
-}
-
-.caption {
-	background: lightyellow;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
-}
-
-/* USERS CLASSES COLORS */
+/* MISC */
+/* users classes colors */
 .SuperAdmin {
-	color: yellow;
-	background: black;
+    color: yellow;
+    background: black;
 }
-
 .RootAdmin {
-	color: black;
-	background: red;
+    color: black;
+    background: red;
 }
-
 .Admin {
-	background: orange;
+    background: orange;
 }
-
 .SuperUser {
-	color: yellow;
-	background: blue;
+    color: yellow;
+    background: blue;
 }
-
-.SuperUser_ru {
-	background: lightblue;
+.SuperUserRu {
+    background: lightblue;
 }
-
-.User {
-	background: lightgreen;
+.MumbleUser {
+    background: lightgreen;
 }
-
 .unauth {
-	background: #dbdbdb;
-}
-
-/* DESCRIPTION DIV */
-.description {
-	color: black;
-	background: white;
-}
-
-.description a {
-	color: blue;
-}
-
-/* INFO BUBBLE */
-.bubble span.desc {
-	color: black;
-	background: lightyellow;
-	border-color: gray;
-}
-
-/* FILLS */
-.fill {
-	background: #dbdbdb;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
-}
-
-.fill.occ {
-	color: #FBB117;
-	background: #5d0000;
-}
-
-.fill.occ a {
-	color: lightyellow;
-}
-
-.fill .nb {
-	color: lightyellow;
-}
-
-.oBox {
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
-}
-
-.bg1 {
-	background: #f6f6f6;
-}
-
-/* EXPAND */
-/* expand a <ul></ul> menu on a mouse hover */
-.expand ul {
-	color: gray;
-	background: #e7e7e7;
-}
-
-.expand ul li a:hover {
-	background: lightgray;
-}
-
-.expand li .count {
-	color: green;
+    background: #dbdbdb;
 }
 
 /* ACTIONBOX */
 .actionBox {
-	background: #dbdbdb;
+    background: #d4d0c8;
 }
-
 .actionBox.alert {
-	background: #ffe8ec;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+    background: #ffe8ec;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+.actionBox .cancel {
+    background: white;
+}
+.actionBox h3 {
+    background: #5d0000;
+    color: #f6f6f6;
+}
+.actionBox .scroll {
+    background: white;
+}
+.actionBox .scroll label:hover {
+    background: #ffe8ec; /* simily pink */
 }
 
-.actionBox h1 {
-	background: #5d0000;
-	color: #f6f6f6;
+/* BUTTONS */
+.button:hover {
+    outline-color: #FBB117;
 }
 
-.actionBox img.back {
-	background: white;
+/* CAPTIONS */
+.caption span.inside {
+    background: lightyellow;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
 }
 
-.actionBox img.drag {
-	background: #5d0000;
+/***************
+ DEBUG
+****************/
+
+.debug {
+    color: black;
+    background: #ffe8ec; /* simily pink */
+}
+.debug .sessid {
+    color: darkred;
+}
+.debug .level {
+    color: dimgray;
+}
+.debug .core {
+    color: darkblue;
+}
+.debug .class {
+    color: #7F007F;
+}
+.debug .method {
+    color: darkgreen;
+}
+.debug .array {
+    color: #7F007F;
+}
+.debug .key {
+    color: darkblue;
+}
+.debug .error {
+    background: lightyellow;
 }
 
-/* TOOLBAR */
-.toolbar {
-	background: #dbdbdb;
+#debugLanguages .missing {
+    color: orange;
+}
+#debugLanguages .obsolete {
+    color: red;
+}
+#debugLanguages .var {
+    color: darkblue;
+}
+#debugLanguages .str {
+    color: green;
 }
 
-.toolbar .button {
-	background: #f6f6f6;
+/* DESCRIPTION BOX */
+.description {
+    color: black;
+    background: white;
+}
+.description a {
+    color: blue;
 }
 
-.toolbar .tab.selected {
-	background: #f6f6f6;
-	border-color: #dbdbdb;
+/* EXPAND MENU */
+.expand ul {
+    color: gray;
+    background: #e7e7e7;
+}
+.expand ul li a:hover {
+    background: lightgray;
+}
+.expand li .count {
+    color: green;
+}
+.expand li .filtered {
+    color: green;
+}
+.expand li .unfiltered {
+    color: red;
+}
+.expand li .selected {
+    background: gray;
+    color: lightyellow;
 }
 
-/* SEARCH */
-#search {
-	color: black;
-	background: #dbdbdb;
+
+/* FILLS */
+#PMA_infoPanel {
+    background: #f6f6f6;
+}
+.fill {
+    background: #dbdbdb;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+.fill mark {
+    color: green;
+}
+.fill.occasional {
+    color: #FBB117;
+    background: #5d0000;
+}
+.fill.occasional a {
+    color: lightyellow;
+}
+.fill.occasional mark {
+    color: lightyellow;
+}
+
+/* INFORMATION */
+.information {
+    background: OldLace;
+}
+.information h3 span {
+    background: WhiteSmoke;
+}
+.information .newPw {
+    background: Olive;
+    color: WhiteSmoke ;
 }
 
 /* MESSAGES BOX */
 .messageBox {
-	color: black;
-	background-color: white;
+    color: black;
+    background: white;
 }
-
 .messageBox a {
-	color: blue;
+    color: blue;
+}
+.messageBox .inside.error {
+    background: #ffe8ec; /* Similly pink */
+}
+.messageBox .inside.success {
+    background: #ccffcc; /* similly light green */
+}
+.messageBox .inside h3 {
+    color: lightyellow;
+    background: #5d0000;
+}
+.messageBox .inside .button {
+    background: white;
 }
 
-.messageBox img.button {
-	background: white;
+/* ONLINE USERS */
+.onlineUsers .safe {
+    color: green;
+}
+.onlineUsers .warn {
+    color: darkorange;
+}
+.onlineUsers .unsafe {
+    color: red;
 }
 
-.messageBox .error {
-	background-color: #ffe8ec; /* Similly pink */
+/* TABLE PAGING BOX */
+div.tablePaging a, div.tablePaging span.nolink {
+    color: gray;
+    border-color: gray;
+    background: #dbdbdb;
+}
+div.tablePaging .selected {
+    color: lightyellow;
+    background: #5d0000;
+    border-color: lightyellow;
 }
 
-.messageBox .fatal {
-	background-color: red;
-	font-weight: bold;
-	font-size: 14px;
+/* SCROLL */
+.scroll {
+    background: white;
+}
+.scroll label:hover {
+    background: #ffe8ec; /* simily pink */
 }
 
-.messageBox .success {
-	background-color: #ccffcc;
+/* TOOLBAR */
+.toolbar {
+    background: #dbdbdb;
+}
+.toolbar .subtab li.selected {
+    background: #f6f6f6;
+    border-color: #dbdbdb darkgray darkgray #dbdbdb;
+}
+.toolbar .button {
+    background: #f6f6f6; /* white with light gray */
 }
 
-.messageBox .title {
-	color: yellow;
-	background: #5d0000;
-}
-
-.messageBox .alt {
-	color: green;
-}
-
-.messageBox .supw {
-	color: green;
+/* TOOLTIP */
+.tooltip span.desc {
+    color: black;
+    background: lightyellow;
+    border-color: gray;
 }
 
 /*********
  HEAD
 *********/
 
-#head {
-	background: #5d0000;
-	color: #FBB117;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+#PMA_header {
+    background: #5d0000;
+    color: #FBB117;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
 }
-
-#head a {
-	color: lightyellow;
+#PMA_header a {
+    color: lightyellow;
 }
-
-#head .comment {
-	color: lightyellow;
+#PMA_header h3 {
+    color: lightyellow;
 }
-
-#head .languages img.selected {
-	outline-color: #FBB117;
+#PMA_user span.userclass {
+    color: lightyellow;
 }
-
-#head .userclass {
-	color: lightyellow;
-}
-
-#head .bottom .pages .selected {
-	color: #5d0000;
-	background: lightyellow;
+#PMA_pages li.selected a {
+    color: #5d0000;
+    background: lightyellow;
 }
 
 /***************
  PROFILES
 ***************/
 
-#profiles a {
-	background: lightyellow;
-	color: #5d0000;
+#PMA_profiles li {
+    background: lightyellow;
 }
-
-#profiles a:hover {
-	background: #dbdbdb;
+#PMA_profiles li:hover {
+    background: #dbdbdb;
 }
-
-#profiles a.selected {
-	background: #5d0000;
-	color: lightyellow;
+#PMA_profiles li.selected {
+    background: #5d0000;
+}
+#PMA_profiles li.selected a {
+    color: lightyellow;
 }
 
 /**************************
- PAGES CONTAINER
+ BODY
 ***************************/
 
-#page {
-	background: white;
-	border-color: #5d0000;
+#PMA_body {
+    background: white;
+    border-color: #5d0000;
 }
-
-#page .page_top {
-	color: lightyellow;
+#PMA_bodyPanel {
+    color: lightyellow;
 }
-
-#page .page_top .vserver {
-	background: #5d0000;
+#PMA_bodyPanel h2 {
+    background: #5d0000;
 }
-
-#page .page_top .vserver .sharp {
-	color: #FBB117;
+#PMA_bodyPanel h2 abbr {
+    color: #FBB117;
 }
-
-#page .page_top .dropdown_list {
-	background: #5d0000;
+#PMA_bodyPanel .dropdown_list {
+    background: #5d0000;
 }
-
-#page .page_top .dropdown_list select {
-	background: lightyellow;
+#PMA_bodyPanel .dropdown_list select {
+    background: lightyellow;
 }
-
-#page .page_top .dropdown_list select .selected {
-	color: yellow;
-	background: #5d0000;
+#PMA_bodyPanel .dropdown_list select .selected {
+    color: yellow;
+    background: #5d0000;
 }
-
-#page .page_top .dropdown_list select .selected.disabled {
-	color: gray;
+#PMA_bodyPanel .dropdown_list select .selected.disabled {
+    color: gray;
 }
 
 /*********
  TABS
 *********/
 
-#tabs a {
-	background: #dbdbdb;
+#PMA_body_tabs a {
+    background: #dbdbdb;
 }
+#PMA_body_tabs li.selected a {
+    background: #d4d0c8;
+    /* outset maroon */
+    border-color: #ceb2b2 darkgray #d4d0c8 #ceb2b2;
 
-#tabs li.selected a {
-	background: #f6f6f6;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #f6f6f6 #ceb2b2;
 }
-
-#tabs a:hover {
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+#PMA_body_tabs a:hover {
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
 }
 
 /***************
- CONTENTS
+ MAIN
 ***************/
 
-#contents {
-	background: #f6f6f6;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+main {
+    background: #d4d0c8;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+main .inside {
+    background: white;
 }
 
-#contents .box {
-	background: white;
+/* CERTIFICATE */
+#certificate {
+    background: white;
+    color: black;
+}
+#certificate h4 {
+    background: lightgray;
+}
+#certificate span.value {
+    color: darkred;
+}
+
+/* SEARCH */
+#search {
+    color: black;
+    background: #dbdbdb;
+}
+#search .found {
+    color: green;
 }
 
 /****************
@@ -466,219 +467,225 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
  page: OVERVIEW
 ***********************/
 
+table#overview td.selected {
+    color: #f6f6f6;
+    background: #5d0000;
+}
+
 /*****************************
  page: CONFIGURATION
 *****************************/
+
+#fileRequirement span.good {
+    color: green;
+}
+#fileRequirement span.bad {
+    color: red;
+}
+
+/*****************************
+ page: ADMINISTRATION
+*****************************/
+
+#admin {
+    background: #f6f6f6;
+}
+#admin .card {
+    background: white;
+}
+#admin .card .key {
+    color: black;
+}
+#admin .card .value {
+    color: darkred;
+}
+#admin .card mark.value {
+    background: #ffe8ec; /* simily pink */
+}
+#adminsServersAccess {
+    background: #dbdbdb;
+}
+#adminsServersAccess .buttons {
+    background: #f6f6f6;
+}
+#adminsServersAccess .fullAccess {
+    background: #5d0000;
+    color: lightyellow;
+}
 
 /********************
  page: VSERVER
 *********************/
 
-	/* tab: CHANNELS */
+/* tab: CHANNELS */
 #viewerBox {
-	background: #f6f6f6;
+    background: #f6f6f6;
+}
+#viewerBox .toolbar.user {
+    background: #FBB117;
+}
+#viewerBox .toolbar.channel {
+    background: #5d0000;
+}
+#viewerBox .toolbar.channel .expand, #viewerBox .toolbar.channel .subtab a {
+    color: lightyellow;
+}
+#viewerBox .toolbar.channel .subtab .selected a {
+    color: #5d0000;
 }
 
-#viewerBox .tabmenu.channel {
-	border-color: #5d0000;
+#viewerBox ul#menuList {
+    background: white;
 }
-
-#viewerBox .tabmenu.channel .tab {
-	background: #FBB117;
-	color: #5d0000;
+#viewerBox ul#menuList li a {
+    color: #5d0000;
 }
-
-#viewerBox .tabmenu.channel .tab:hover {
-	background: #dbdbdb;
+#viewerBox ul#menuList li a.disabled {
+    background: #dbdbdb;
+    color: gray;
 }
-
-#viewerBox .tabmenu.channel .tab.selected {
-	background: #5d0000;
-	color: white;
+#viewerBox ul#menuList li a.selected,
+#viewerBox ul#menuList li a.selected.disabled,
+#viewerBox ul#menuList li a:hover
+{
+    background: #5d0000;
+    color: lightyellow;
 }
-
-#viewerBox .tabmenu.user {
-	border-color: #FBB117;
+#viewerBox ul#menuList li a img {
+    background: white;
 }
-
-#viewerBox .tabmenu.user .tab {
-	background: #dbdbdb;
-	color: #5d0000;
+#viewerBox ul#menuList li a img.groupModified {
+    background: darkorange;
 }
-
-#viewerBox .tabmenu.user .tab:hover {
-	background: lightgray;
-}
-
-#viewerBox .tabmenu.user .tab.selected {
-	background: #FBB117;
-	color: #5d0000;
-	border-color: #ceb2b2;
-	border-top: 1px solid  #FBB117;
-}
-
-#viewerBox .tabmenu .expand.tab {
-	background: #dbdbdb;
-}
-
-	/* viewer */
-#viewer .selected {
-	background: #FBB117;
-	color: #5d0000;
-}
-
-#viewer.action {
-	background: #f6f6f6;
-	color: gray;
-}
-
-#viewer.disabled {
-	background: #f6f6f6;
-	color: gray;
-}
-
-#viewer.disabled .moveTo {
-	background: red;
-	color: black;
-}
-
-#viewer a:hover {
-	background: #dbdbdb;
-}
-
-#viewer.action a {
-	background: #ffe8ec; /* simily pink */
-}
-
-#viewer.action a:hover {
-	background: red;
-}
-
-.board a {
-	color: black
-}
-
-.board .inherited {
-	background: #dbdbdb;
-	color: gray;
-}
-
-.board .modified {
-	background: #FBB117;
-}
-
-.board .selected {
-	background: #a4b8d4 !important; /* blue pastel */
-	color: black;
-}
-
-.board a:hover {
-	background: gray;
-	color: white;
-}
-
 
 /* GROUP tab */
 .empty {
-	color: gray;
-	background: #dbdbdb;
+    background: #dbdbdb;
+    color: gray;
+}
+#viewerBox .groupMembers {
+    background: white;
+}
+#viewerBox .groupMembers li:hover {
+    background: #dbdbdb;
+    color: black;
+}
+#viewerBox .groupMembers .button {
+    background: white;
+}
+#viewerBox .groupMembers li.empty {
+    background: #dbdbdb;
+    color: gray;
+}
+#viewerBox #userInfos {
+    background: white;
+    color: black;
+}
+#viewerBox #userInfos span.value {
+    color: darkred;
 }
 
-.groupMembers {
-	background: white;
+/* VIEWER */
+.viewer.action {
+    background: #f6f6f6;
+    color: gray;
+}
+.viewer.action p a {
+    background: #ffe8ec; /* simily pink */
+}
+.viewer.action p a:hover {
+    background: red;
+}
+.viewer p a:hover {
+    background: #dbdbdb;
+}
+.viewer .selected,
+.viewer.action .selected a {
+    background: #FBB117;
+    color: #5d0000;
+}
+.viewer.action .moveTo {
+    background: red;
+    color: black;
 }
 
-.groupMembers li img.button {
-	background: white;
+
+/* tab: SETTINGS */
+table#vserverSettings {}
+table#vserverSettings tr:hover th.key {
+    background: #f6f6f6;
+    color: black;
+}
+table#vserverSettings .modified {
+    color: blue;
 }
 
-.groupMembers li:hover {
-	background:#dbdbdb;
+/* tab: REGISTRATIONS */
+#mumbleRegistration .card {
+    background: #f6f6f6;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+}
+#mumbleRegistration .avatar {
+    background: #dbdbdb;
 }
 
-.groupMembers li.disabled {
-	background: #dbdbdb;
-	color: gray;
-}
-
-
-	/* tab: SETTINGS */
-#vserver_settings tr:hover .key {
-	background: #f6f6f6;
-}
-
-#vserver_settings .modified {
-	color: blue;
-}
-
-	/* tab: REGISTRATIONS */
-#avatar {
-	background: #dbdbdb;
-}
-
-	/* tab: BANS */
-#bans .user {
-	color: black;
+/* tab: BANS */
+#murmurBans td .mask {
+    color: red;
 }
 
 /***************
- page: LOGS
+ PMA_logs
 ****************/
 
-#logs {
-	background: #f6f6f6;
-	color: black;
+#PMA_logs {
+    background: #f6f6f6;
+    color: black;
 }
-
-#logs .Ldate {
-	background: #dbdbdb;
+#PMA_logs h4 {
+    background: #dbdbdb;
+    color: black;
 }
-
-#logs .Ltime {
-	color: #5d0000;
-	background: #dbdbdb;
+#PMA_logs time {
+    background: #dbdbdb;
+    color: #5d0000;
 }
-
-#logs .Lauth {
-	background: #a4b8d4; /* Blue pastel */
+#PMA_logs .Lauth {
+    background: #a4b8d4; /* Blue pastel */
 }
-
-#logs .Lclosed_conn {
-	background: pink;
+#PMA_logs .Lclosed {
+    background: pink;
 }
-
-#logs .Linfo {
-	background: #acff00; /* Flashy green */
+#PMA_logs .Linfo {
+    background: #acff00; /* Flashy green */
 }
-
-#logs .Lwarn {
-	background: #FBB117;
+#PMA_logs .Lwarn {
+    background: #FBB117;
 }
-
-#logs .Lerror {
-	background: red;
+#PMA_logs .Lerror {
+    background: red;
 }
-
-#logs .Ladmin {
-	color: yellow;
-	background: black;
+#PMA_logs .Ladmin {
+    color: yellow;
+    background: black;
 }
 
 /***********
  FOOTER
 ************/
 
-#whos_online {
-	background: white;
+#PMA_footer_whos_online {
+    background: white;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
 }
-
-#footer {
-	background: #5d0000;
-	color: #FBB117;
-	/* outset maroon */
-	border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
+#PMA_footer {
+    background: #5d0000;
+    color: #FBB117;
+    /* outset maroon */
+    border-color: #ceb2b2 #5d0000 #5d0000 #ceb2b2;
 }
-
-#footer a {
-	color: lightyellow;
+#PMA_footer a {
+    color: lightyellow;
 }

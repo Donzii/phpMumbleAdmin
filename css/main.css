@@ -1,0 +1,776 @@
+
+ /*
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/****************
+ HEAD
+****************/
+
+#PMA_header {
+    height: 75px;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    /* shadow */
+    box-shadow: 2px 2px 2px #888888;
+    /* top radius */
+    border-radius: 5px 5px 0px 0px;
+}
+#PMA_header h1 {
+    margin: 0px;
+    white-space: pre;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+#PMA_header h3 {
+    margin: 0px;
+    white-space: pre;
+    overflow: hidden;
+    height: 18px;
+    width: 50%;
+    margin-left: 20px;
+    font-style: italic;
+}
+#PMA_langFlags {
+    float: right;
+    padding: 4px 5px;
+}
+#PMA_langFlags li {
+    display: inline;
+}
+#PMA_langFlags img {
+    margin-left: 2px;
+}
+#PMA_user {
+    float: left;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+}
+#PMA_user span.userclass {
+    font-style: italic;
+}
+#PMA_pages {
+    float: right;
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+}
+#PMA_pages li {
+    display: inline;
+}
+#PMA_pages a {
+    margin: 0px 2px;
+    padding: 5px;
+}
+
+/*********************
+ PROFILES
+*********************/
+
+#PMA_profiles {
+    margin: 0px 10px;
+}
+#PMA_profiles li {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+    padding-right: 2px;
+    box-shadow: 0px 2px 2px #888888;
+}
+#PMA_profiles li.selected {
+    padding-bottom: 5px;
+}
+#PMA_profiles li a {
+    padding: 1px 10px;
+    text-decoration: none;
+}
+#PMA_profiles li a span.text {
+    white-space: pre;
+    margin-right: 5px;
+}
+
+/****************
+ BODY
+****************/
+
+#PMA_body {
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-bottom: 10px solid black;
+}
+#PMA_bodyPanel {
+    height: 30px;
+    margin: -10px;
+    margin-bottom: 5px;
+}
+#PMA_bodyPanel h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 2px 10px;
+    height: 21px;
+    font-weight: bold;
+    font-size: 16px;
+}
+#PMA_bodyPanel h2 .id {
+    margin-left: 10px;
+}
+#PMA_bodyPanel h2 abbr {
+    font-size: 14px;
+}
+#PMA_bodyPanel h2 .serverName {
+    white-space: pre;
+}
+#PMA_bodyPanel .dropdown_list {
+    float: right;
+    padding: 2px 10px;
+    height: 21px;
+}
+#PMA_bodyPanel .dropdown_list select {
+    width: 300px;
+    margin: 0px 5px;
+}
+
+/***************
+ TABS
+***************/
+
+#PMA_body_tabs {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+#PMA_body_tabs li {
+    display: inline;
+}
+#PMA_body_tabs a {
+    text-decoration: none;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+#PMA_body_tabs a:hover {
+    padding: 9px;
+    padding-bottom: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-right: 1px solid black;
+}
+#PMA_body_tabs li.selected a {
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-right: 1px solid black;
+    border-bottom: 1px solid white;
+}
+
+/***************
+ MAIN
+***************/
+
+main {
+    padding: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+main .inside {
+    min-height: 300px;
+    padding: 10px;
+    margin: 10px 0px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+main .inside.small {
+    width: 550px;
+}
+
+/* CERTIFICATE */
+#certificate {
+    padding: 5px;
+    word-wrap: break-word;
+    cursor: default;
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+#certificate p {
+    margin: 3px;
+}
+#certificate h4 {
+    margin-top: 10px;
+}
+#certificate span.key {
+    font-weight: bold;
+}
+#certificate span.value {
+    font-weight: bold;
+}
+
+/* INFO PANEL */
+#PMA_infoPanel {
+    min-height: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* SEARCH */
+#search {
+    float: right;
+    margin-top: -5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#search input {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/****************
+ page: AUTH
+****************/
+
+/***********************
+ page: OVERVIEW
+***********************/
+
+#overview .serverName {
+    font-weight: bold;
+    height: 15px; /* Dont break selection on empty serverName. */
+}
+
+/*****************************
+ page: CONFIGURATION
+*****************************/
+
+#fileRequirement {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#fileRequirement h3 {
+    margin-bottom: 10px;
+}
+#fileRequirement span.path {
+    font-weight: bold;
+}
+
+/*****************************
+ page: ADMINISTRATION
+*****************************/
+
+/* tab: ADMINS */
+#admin {
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#admin .card {
+    float: left;
+    width: 35%;
+    font-weight: bold;
+    padding: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#admin .card p {
+    margin: 5px 0px;
+    overflow: hidden;
+}
+#admin .card .value, #admin .card mark {
+    white-space: pre;
+    word-wrap: break-word;
+}
+#admin .card .value.access {
+    margin-left: 10px;
+    padding: 0px 5px;
+}
+#admin .card .value.access img {
+    margin-right: 5px;
+}
+
+#adminsServersAccess {
+    float: right;
+    width: 60%;
+    padding: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#adminsServersAccess div.buttons {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#adminsServersAccess div.buttons input {
+    margin-right: 5px;
+}
+#adminsServersAccess div.buttons .apply {
+    float: right;
+    font-weight: bold;
+}
+#adminsServersAccess .fullAccess {
+    float: right;
+    width: 35%;
+    margin: 0px 2px;
+}
+#adminsServersAccess .fullAccess input.chkbox {
+    float: left;
+}
+#adminsServersAccess .fullAccess label {
+    display: block;
+    padding: 3px 5px;
+    font-weight: bold;
+}
+#adminsServersAccess .scroll {
+    height: 400px;
+}
+
+/********************
+ page: VSERVER
+*********************/
+
+/* tab: CHANNELS */
+#viewerBox {
+    float: left;
+    width: 350px;
+    min-height: 350px;
+    padding: 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#viewerBox .toolbar {
+    min-height: 18px;
+    line-height: 18px;
+    text-align: right;
+}
+#viewerBox ul#menuList {
+    padding: 5px;
+    text-align: left;
+    margin: 10px 0px;
+    font-weight: bold;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#viewerBox ul#menuList li a {
+    display: block;
+    padding: 2px 5px;
+    text-decoration: none;
+    overflow: hidden;
+}
+#viewerBox ul#menuList li a:hover {
+    background: black;
+    color: white;
+}
+#viewerBox ul#menuList li a.disabled {
+    font-style: italic;
+}
+#viewerBox ul#menuList li a.selected {
+    background: black;
+    color: white;
+}
+#viewerBox ul#menuList li a span.text {
+    white-space: pre;
+}
+#viewerBox ul#menuList li a img {
+    margin-right: 5px;
+    padding: 0px 5px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#viewerBox ul#menuList li a img.groupInherited {
+    background: gray;
+}
+#viewerBox ul#menuList li a img.groupModified {
+    background: gray;
+}
+
+#viewerBox #channelProperty .channelName {
+    height: 40px;
+    margin: 10px 0px;
+}
+#viewerBox #channelProperty .apply {
+    margin: 10px 0px;
+    text-align: right;
+}
+
+#viewerBox #ACL select {
+    margin-bottom: 5px;
+}
+#viewerBox #ACL table {
+    table-layout: auto;
+    margin: 10px auto;
+}
+#viewerBox #ACL tr {
+    height: 10px;
+}
+#viewerBox #ACL th {
+    text-align: right;
+}
+#viewerBox #ACL td {
+    text-align: center;
+    padding: 0px;
+}
+#viewerBox #ACL.disabled {
+    color: #666666;
+}
+
+.empty {
+    font-weight: bold;
+}
+#viewerBox form.addGroup {
+    margin: 10px 0px;
+}
+#viewerBox form.addGroup .submit {
+    margin-left: 10px;
+}
+#viewerBox .groupMembers {
+    padding: 5px;
+    margin-bottom: 20px;
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+#viewerBox .groupMembers li {
+    cursor: default;
+    /* for inside images, vertical center the text */
+    height: 20px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+#viewerBox .groupMembers li .button {
+    float: right;
+    margin-left: 5px;
+}
+#viewerBox .groupMembers li span {
+    margin-left: 10px;
+}
+#viewerBox .groupMembers li .login {
+    display: block;
+    white-space: pre;
+    overflow: hidden;
+}
+
+#viewerBox #userInfos {
+    padding: 5px;
+    word-wrap: break-word;
+    cursor: default;
+    /* inset black */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid #b2b2b2;
+    border-right: 1px solid #b2b2b2;
+}
+#viewerBox #userInfos p {
+    margin: 6px;
+}
+#viewerBox #userInfos span.text {
+    font-weight: bold;
+}
+#viewerBox #userInfos span.value {
+    font-weight: bold;
+}
+
+/* tab: SETTINGS */
+
+#vserverSettings tr:hover th.key {
+    background: black;
+    color: white;
+}
+#vserverSettings th {
+    text-align: right;
+}
+#vserverSettings th.headKey {
+    width: 150px;
+}
+#vserverSettings th.headInput {
+    /** Width 280px for chrome */
+    width: 280px;
+}
+#vserverSettings .key {
+    padding: 0px;
+}
+#vserverSettings .key .tooltip {
+    display: block;
+    padding: 4px 10px;
+}
+#vserverSettings .value {
+    display: block;
+    overflow: hidden;
+    white-space: pre;
+}
+#vserverSettings .modified {
+    font-weight: bold;
+}
+#vserverSettings select {
+    width: 200px;
+}
+#vserverSettings input.small {
+    width: 50px;
+}
+
+/* tab: SETTINGS MORE */
+
+#vserverSettingsMore {
+    padding: 10px;
+    width: 800px;
+    margin: auto;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#vserverSettingsMore .PEM {
+    white-space: pre;
+    margin: auto;
+    width: 500px;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* tab: REGISTRATIONS */
+#mumbleRegistration {
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#mumbleRegistration .card {
+    padding: 5px 10px;
+    margin: auto;
+    width: 900px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#mumbleRegistration .menu {
+    float: left;
+    width: 180px;
+}
+#mumbleRegistration .menu li {
+    margin: 5px 0px;
+}
+#mumbleRegistration .menu li a {
+    white-space: normal;
+}
+#mumbleRegistration .userInfos {
+    float: left;
+    margin-left: 10px;
+    width: 50%;
+}
+#mumbleRegistration .userInfos .login {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    white-space: pre;
+}
+#mumbleRegistration .userInfos tr {
+    height: 22px;
+}
+#mumbleRegistration .avatar {
+    float: left;
+    margin-left: 10px;
+    width: 200px;
+    height: 200px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#mumbleRegistration .avatar .text {
+    white-space: nowrap;
+    overflow: hidden;
+    /* vertical text align : center */
+    line-height: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+#mumbleRegistration .avatar img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+/* tab: BANS */
+#ban_duration  {
+    font-weight: bold;
+    text-align: center;
+    /* remove margin of the actionBox */
+    margin: 0px -20px;
+}
+#ban_duration select {
+    width: 80px;
+}
+#ban_duration div {
+    margin: 10px 0px;
+}
+
+/***************
+ DEBUG
+****************/
+
+#debugLanguages {
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#debugLanguages .missing,
+#debugLanguages .obsolete,
+#debugLanguages .var {
+    font-weight: bold;
+}
+#debugLanguages .str {
+    font-weight: normal;
+}
+
+/***************
+ PMA_logs
+****************/
+
+#PMA_logs {
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+/**
+#PMA_logs h5 {
+    text-align: right;
+}
+*/
+#PMA_logs h4 {
+    margin: 10px 0px;
+    padding: 0px 25px;
+    background: black;
+    color: white;
+}
+#PMA_logs time {
+    margin-right: 15px;
+    padding: 0px 4px;
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+#PMA_logs span.log {
+    white-space: pre-wrap;
+}
+
+/*****************
+ FOOTER
+*****************/
+
+#PMA_footer_whos_online {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#PMA_footer_whos_online img {
+    margin-right: 20px;
+}
+#PMA_footer_whos_online span {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 3px;
+    font-weight: bold;
+}
+
+footer#PMA_footer {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    /* outset black */
+    border-top: 1px solid #b2b2b2;
+    border-left: 1px solid #b2b2b2;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    /* shadow */
+    box-shadow: 2px 2px 2px #888888;
+    /* bottom radius */
+    border-radius: 0px 0px 5px 5px;
+}

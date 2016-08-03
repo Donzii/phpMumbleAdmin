@@ -1,3 +1,4 @@
+
 /**
 * If you have an "Invalid slice definition file" error with PhpMumbleAdmin:
 *
@@ -12,10 +13,10 @@ If you are using phpICE 3.2 with murmur 1.2.x, you need to follow theses instruc
 Open the Murmur.ice file binding with murmurd
 
 Search for :
-	dictionary<UserInfo, string> UserInfoMap;
+    dictionary<UserInfo, string> UserInfoMap;
 
 replace with :
-	dictionary<byte, string> UserInfoMap;
+    dictionary<byte, string> UserInfoMap;
 
 Restart your http daemon.
 

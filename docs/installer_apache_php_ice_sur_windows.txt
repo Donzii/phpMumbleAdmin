@@ -1,0 +1,40 @@
+
+# IMPORTANT
+# Il faut le même VC entre apache et php. Zeroc Ice n'est comipler (selon la version) que pour un certain type de VC.
+# Ensuite, la variable %PATH% doit contenir en plus les 4 paths:
+# d:\prog\apache\bin;d:\prog\php\bin;d:\prog\ice\bin;d:\prog\ice\php
+
+
+# CONF APACHE (example)
+
+ServerRoot "D:/progs/x32/apache/Apache2.4.9-win32-VC9"
+ServerAdmin admin@example.com
+ServerName www.localhost:80
+
+alias "/PMA" "D:/Bureau/PMA"
+
+<Directory "D:/Bureau/PMA">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require ip 127.0.0.1
+    Require ip ::1
+</Directory>
+
+# PHP 5
+#LoadModule php5_module D:/progs/x32/php/php-5.5.12-Win32-VC11-x86/php5apache2_4.dll
+LoadModule php5_module D:/progs/x32/php/php-5.4.28-Win32-VC9-x86/php5apache2_4.dll
+<IfModule php5_module>
+    AddHandler application/x-httpd-php .php
+    # Path to php.ini
+    PHPIniDir "D:/progs/x32/php/php-5.4.28-Win32-VC9-x86"
+</IfModule>
+
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
+
+# CONF PHP.INI (example)
+
+include_path=".;D:\progs\x32\ZeroC\Ice-3.5.1\php\"
+extension_dir="ext/"
+extension=php_ice.dll

@@ -3,9 +3,9 @@ This copyright and license notice covers the images in this directory.
 Note the license notice contains an add-on.
 ************************************************************************
 
-TITLE:	Glossy eCommerce Icons Pack
-AUTHOR:	Eoin McGrath | Starfish Web Consulting
-SITE:		http://www.starfishwebconsulting.co.uk
+TITLE: Glossy eCommerce Icons Pack
+AUTHOR: Eoin McGrath | Starfish Web Consulting
+SITE: http://www.starfishwebconsulting.co.uk
 
 
 Copyright (c)  2008  Starfish Web Consulting
@@ -35,5 +35,5 @@ Look at the license.txt file.
 
 CONTACT
 
-e-mail :		eoin [at] starfish.ie
-http:           	http://www.starfishwebconsulting.co.uk
+e-mail : eoin [at] starfish.ie
+http:            http://www.starfishwebconsulting.co.uk
