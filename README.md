@@ -292,4 +292,10 @@ If you feel lonely or for some comments, feedback, bug report, feature request:
 I'm also idling in the IRC of the mumble dev (nick name: ipnoz) :
 
     irc://irc.freenode.org/mumble
+	
+	
+	
+// Quide to installing phpMumbleAdmin under Debian
+/////////////////////////
+https://sourceforge.net/p/phpmumbleadmin/discussion/1065855/thread/300a83c8/
 
