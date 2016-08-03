@@ -18,12 +18,26 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['add_ban'] = 'Ban hinzufügen';
-$TEXT['cert_included'] = 'Zertifikat enthalten';
-$TEXT['del_ban'] = 'Ban löschen';
-$TEXT['confirm_del_ban'] = 'Diesen Ban wirklich löschen?';
-$TEXT['invalid_mask'] = 'Ungültige Eingabe';
-$TEXT['bitmask'] = 'Bit mask';
-$TEXT['bitmask_info'] = 'IPv4 : 1 bis 32<br>IPv6 : 1 bis 128<br>Lassen Sie diese leer oder gebe einen höheren Wert für den Ban ein. Nur für die die Ban-IP-Adresse';
-$TEXT['reason'] = 'Grund';
-$TEXT['edit_ban'] = 'Ban bearbeiten';
+/**
+* %1$s = "HTTP hostname or IP"
+* %2$s = "Profile name"
+* %3$s = "Mumble server name"
+* %4$s = "HTTP url"
+* %5$d = "delay time"
+*/
+
+$TEXT['pw_mail_title'] = 'Mumble Passwordgenerations Anfrage';
+
+$TEXT['pw_mail_body'] =
+'HTTP host : %1$s<br />
+Ice profile : %2$s<br />
+Mumble server : %3$s<br /><br />
+
+If you don\'t know what this means, or you didn\'t request a password generation for your mumble account,
+please just delete this email and nothing will be done.<br /><br />
+
+Please confirm your password generation for your mumble account by following this link:<br /><br />
+
+<a href="%4$s">%4$s</a><br /><br />
+
+This link is valid for %5$d hour(s) and will redirect you to your new password.';

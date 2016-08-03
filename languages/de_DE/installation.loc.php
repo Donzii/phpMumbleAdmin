@@ -18,12 +18,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$TEXT['add_ban'] = 'Ban hinzufügen';
-$TEXT['cert_included'] = 'Zertifikat enthalten';
-$TEXT['del_ban'] = 'Ban löschen';
-$TEXT['confirm_del_ban'] = 'Diesen Ban wirklich löschen?';
-$TEXT['invalid_mask'] = 'Ungültige Eingabe';
-$TEXT['bitmask'] = 'Bit mask';
-$TEXT['bitmask_info'] = 'IPv4 : 1 bis 32<br>IPv6 : 1 bis 128<br>Lassen Sie diese leer oder gebe einen höheren Wert für den Ban ein. Nur für die die Ban-IP-Adresse';
-$TEXT['reason'] = 'Grund';
-$TEXT['edit_ban'] = 'Ban bearbeiten';
+// Menu
+$TEXT['tab_start'] = 'Informations';
+$TEXT['tab_requirement'] = 'Vorraussetzungen';
+$TEXT['setup_sa'] = 'Setup SuperAdmin';
+$TEXT['tab_setup_SuperAdmin'] = 'Setup SuperAdmin';
+
+$TEXT['install_welcome_msg'] = 'Willkommen zum phpMumbleAdmin.<br><br>Die Installation ben�tigt zwingend ein SuperAdmin Login und Passwort.';
+$TEXT['install_note'] = 'Hinweis: Wenn einen ICE-Fehler nach der Installation aufgetritt, verbinden Sie sich mit dem Superadmin-Konto, um das Problem zu beheben ';
+$TEXT['sa_login'] = 'SuperAdmin Login';
+$TEXT['install_success'] = 'Der SuperAdmin Account wurde erfolgreich eingerichtet';
+$TEXT['install_to_finish'] = 'Um die Installation erfolgreich zu beenden, l�schen Sie den /install/ Ordner, oder benennen Sie ihn um.';

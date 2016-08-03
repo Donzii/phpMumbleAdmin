@@ -1,28 +1,28 @@
 <?php
 
  /*
- *    phpMumbleAdmin (PMA), web php administration tool for murmur ( mumble server daemon ).
- *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
  *
- *    This program is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *    This program is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 $TEXT['img_channel'] = 'Channel mit Passwort';
 $TEXT['img_comment'] = 'Channel / Benutzer mit Kommentar';
 $TEXT['img_auth'] = 'Authentifizierter Benutzer';
 $TEXT['img_muted'] = 'Von einem Admin gemmuted';
-$TEXT['img_deafened '] = 'Von einem Admin taubgestellt';
+$TEXT['img_deafened'] = 'Von einem Admin taubgestellt';
 $TEXT['img_supressed'] = 'Unterdrückt';
 $TEXT['img_mute'] = 'Selbst gemuted';
 $TEXT['img_deaf'] = 'Selbst taubgestellt';
@@ -44,10 +44,10 @@ $TEXT['move_channel'] = 'Verschiebe den Channel';
 $TEXT['link_channel'] = 'Link den Channel';
 $TEXT['unlink_channel'] = 'Unlink den Channel';
 $TEXT['unlink_all_channels'] = 'Unlink alle direkten Channellinks';
+$TEXT['reason'] = 'Grund';
 $TEXT['kick'] = 'Kick';
 $TEXT['kick_user'] = 'Kick %s'; // %s = user name
 $TEXT['ban'] = 'Ban';
-$TEXT['reason'] = 'Grund';
 $TEXT['ban_user'] = 'Ban %s'; // %s = user name
 $TEXT['move_user'] = 'Verschiebe %s'; // %s = user name
 $TEXT['action'] = 'Aktion';
@@ -59,10 +59,7 @@ $TEXT['deafen'] = 'Taub';
 $TEXT['undeafen'] = 'UnTaub';
 $TEXT['enable_priority'] = 'Enable priority speaker';
 $TEXT['disable_priority'] = 'Disable priority speaker';
-$TEXT['edit_account'] = 'Account bearbeiten';
 $TEXT['register_user'] = 'Benutzer registrieren';
-$TEXT['comment'] = 'Kommentar';
-$TEXT['infos'] = 'Information';
 $TEXT['unregistered'] = 'Unregistriert';
 $TEXT['registration_id'] = 'Registrierungs ID';
 $TEXT['session_id'] = 'Session ID';
@@ -72,12 +69,14 @@ $TEXT['bandwidth'] = 'Bandbreite';
 $TEXT['tcp_mode'] = 'TCP mode';
 $TEXT['mumble_client'] = 'Mumble client';
 $TEXT['os'] = 'Operating system';
-$TEXT['no_comment'] = 'kein Kommentar';
 $TEXT['conn_to_channel'] = 'Connection to the channel';
 $TEXT['del_channel'] = 'Channel löschen';
-$TEXT['tab_acl'] = 'ACL';
-$TEXT['tab_groups'] = 'Gruppen';
-$TEXT['tab_properties'] = 'Eigenschaften';
+$TEXT['subtab_comment'] = 'Kommentar';
+$TEXT['subtab_certificate'] = 'Zertifikat';
+$TEXT['subtab_infos'] = 'Infos';
+$TEXT['subtab_acl'] = 'ACL';
+$TEXT['subtab_groups'] = 'Gruppen';
+$TEXT['subtab_properties'] = 'Eigenschaften';
 $TEXT['set_as_defaultchannel'] = 'Als StandardChannel aktivieren';
 $TEXT['select_user_to_move'] = 'Wähle die Benutzer aus, die in den Channel verschoben werden sollen';
 $TEXT['channel_name'] = 'Channel Name';
@@ -89,6 +88,4 @@ $TEXT['tcp_ping'] = 'TCP ping ( Kontrolle )';
 $TEXT['ping_info'] = 'Durchschnitts-Ping';
 $TEXT['bandwidth_info'] = 'Durchschnittliche Übertragungsrate in Kbit/s in den letzten Sekunden';
 $TEXT['show_cert'] = 'Zeige Zertifikat';
-$TEXT['change_user_session_name'] = 'Benutzernamen ändern';
-
-?>
+$TEXT['modify_user_session_name'] = 'Benutzernamen ändern';

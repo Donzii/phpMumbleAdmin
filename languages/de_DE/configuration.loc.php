@@ -1,21 +1,21 @@
 <?php
 
  /*
- *    phpMumbleAdmin (PMA), web php administration tool for murmur ( mumble server daemon ).
- *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
  *
- *    This program is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *    This program is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 $TEXT['tab_options'] = 'Optionen';
@@ -66,7 +66,13 @@ $TEXT['confirm_del_ICE_profile'] = 'Sie sind sicher, dass Sie dieses ICE-Profil 
 $TEXT['enable_profile'] = 'Hier Klicken, um das Profil zu aktivieren';
 
 // Tab settings
-$TEXT['mumble_accounts'] = 'Mumble Accounts';
+$TEXT['subtab_general'] = 'General';
+$TEXT['subtab_mumbleUsers'] = 'Mumble Accounts';
+$TEXT['subtab_autoban'] = 'Autoban';
+$TEXT['subtab_logs'] = 'Logs';
+$TEXT['subtab_tables'] = 'Tabelle';
+$TEXT['subtab_smtp'] = 'SMTP Server';
+$TEXT['subtab_extViewer'] = 'External Viewer';
 
 $TEXT['disable_function'] = '0 zum Deaktivieren dieser Funktion';
 
@@ -80,7 +86,10 @@ $TEXT['inc_murmur_vers'] = 'Hinzufügen der Mumbleversion in die Connection-URL'
 $TEXT['inc_murmur_vers_info'] = 'Ein alter Mumble-Client kann dann nicht auf den Server über die URL joinen';
 
 $TEXT['show_avatar'] = 'Avatare nur für SuperAdmins anzeigen';
+$TEXT['IcePhp_include_path'] = 'Pfad zur Ice.php Datei';
 
+$TEXT['allowOfflineAuth'] = 'Erlaube Zugang wenn der Server offline ist.';
+$TEXT['allowOfflineAuth_info'] = 'Zugang nur erlauben, wenn der Server online ist. This option authorize PMA to start the server for authentication, then stop it.';
 $TEXT['activate_su_login'] = 'Erlaube Superuser den Zugang zum Panel';
 $TEXT['activate_su_modify_pw'] = 'Erlaubten Superuser dürfen Kennwörter von registrierte Benutzer ändern';
 $TEXT['activate_su_vserver_start'] = 'Erlaubte Superuser dürfen virtuelle Server starten/stoppen';
@@ -91,7 +100,7 @@ $TEXT['activate_ru_login'] = 'Erlaube registrierten Benutzern den Zugang zum Pan
 $TEXT['activate_ru_del_account'] = 'Erlaube registrierten Benutzern, Ihren Account zu löschen';
 $TEXT['activate_ru_modify_login'] = 'Erlaube registrierten Benutzern, Ihre Zugangsdaten zu ändern';
 
-$TEXT['vservers_logs'] = 'Virtuelle Server Logs';
+$TEXT['vservers_logs'] = 'vServer Logs';
 $TEXT['srv_logs_amount'] = 'Anzahl der Logs, die das Panel vom Server anzeigen soll';
 $TEXT['activate_vservers_logs_for_adm'] = 'Aktiviere das Log-Tab für Admins und SuperUser';
 $TEXT['activate_adm_highlight_logs'] = 'Erlaube Admins und SuperUsers das Hightlighten der Logs';
@@ -119,17 +128,14 @@ $TEXT['activate_auth_dropdown_info'] = 'Dies bedeutet, dass alle erreichbaren Se
 $TEXT['refresh_ddl_cache'] = 'Automatische Erneuerung der DropDown-Serverliste (Cache). Zeit in Stunden';
 $TEXT['ddl_show_cache_uptime'] =  'Zeige Cache-Uptime';
 
-$TEXT['autoban'] = 'Autoban';
 $TEXT['autoban_attemps'] = 'Limit der Versuche';
 $TEXT['autoban_frame'] = 'Zeitrahmen ( in Sekunden )';
 $TEXT['autoban_duration'] = 'Ban-Zeit ( in Sekunden )';
 
-$TEXT['smtp_srv'] = 'SMTP server';
 $TEXT['host'] = 'Host';
 $TEXT['port'] = 'port';
 $TEXT['default_sender_email'] = 'Standard Absender-Emailadresse';
 
-$TEXT['external_viewer'] = 'Externer Viewer';
 $TEXT['see_external_viewer'] = 'Siehe Externer Viewer';
 $TEXT['external_viewer_enable'] = 'Aktiviere Externer Viewer';
 $TEXT['external_viewer_width'] = 'Viewer Breite';
@@ -142,5 +148,3 @@ $TEXT['activate_pwgen'] = 'Aktiviere Passwortgenerierung per Email';
 $TEXT['activate_explicite_msg'] = 'Aktivieren explizite Fehlermeldungen';
 $TEXT['sender_email'] = 'Absender-Emailadresse';
 $TEXT['pwgen_max_pending'] = 'Zeit für eine Passwort-Generierungs-Anfrage ( 1 bis 744 Stunden )';
-
- ?>

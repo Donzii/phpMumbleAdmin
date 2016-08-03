@@ -1,21 +1,21 @@
 <?php
 
  /*
- *    phpMumbleAdmin (PMA), web php administration tool for murmur ( mumble server daemon ).
- *    Copyright (C) 2010 - 2013  Dadon David. PMA@ipnoz.net
+ * phpMumbleAdmin (PMA), web php administration tool for murmur (mumble server daemon).
+ * Copyright (C) 2010 - 2015  Dadon David. PMA@ipnoz.net
  *
- *    This program is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *    This program is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 $TEXT['inherit_parent_channel'] = 'Der Channel erbt die obere ACL';
@@ -41,18 +41,15 @@ $TEXT['acl_write'] = 'Schreibe ACL';
 $TEXT['acl_traverse'] = 'Traverse';
 $TEXT['acl_enter'] = 'Enter';
 $TEXT['acl_speak'] = 'Sprechen';
-$TEXT['acl_speak'] = 'Mute/Deafen';
+$TEXT['acl_muteDeaf'] = 'Mute/Deafen';
 $TEXT['acl_move'] = 'Bewegen';
 $TEXT['acl_make'] = 'Erstellen Channel';
 $TEXT['acl_link'] = 'Verknüpfe/Linke Channel';
 $TEXT['acl_wisp'] = 'Flüstern';
 $TEXT['acl_txt'] = 'Text Nachricht';
 $TEXT['acl_temporary'] = 'Temporär erstellen';
-
 $TEXT['specific_root'] = 'Spezifisch für den Root-Channel';
 $TEXT['acl_kick'] = 'Kick';
 $TEXT['acl_ban'] = 'Ban';
 $TEXT['acl_register'] = 'Benutzer registrieren';
 $TEXT['acl_register_self'] = 'Selbst registrieren';
-
-?>
